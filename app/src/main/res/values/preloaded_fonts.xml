@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/cinzel_decorative</item>
+        <item>@font/combo</item>
+        <item>@font/condiment</item>
+        <item>@font/dancing_script_bold</item>
+        <item>@font/days_one</item>
+        <item>@font/finger_paint</item>
+        <item>@font/kavivanar</item>
+        <item>@font/monofett</item>
+    </array>
+</resources>

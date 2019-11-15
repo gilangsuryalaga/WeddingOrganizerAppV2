@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".AdminCategoryActivity">
+
+
+    <TextView
+        android:id="@+id/slogan_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="27dp"
+        android:text="@string/add_new_product"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/slogan_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/tempat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/linear1_category_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/slogan_category"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/wedding_dress"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:layout_margin="7dp"
+                        android:src="@drawable/bridedress" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/wedding_dress"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:text="Wedding Dress"
+                        android:textAlignment="center"
+                        android:textStyle="italic" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/wedding_suit"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="2"
+                        android:src="@drawable/weddingsuit" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/wedding_suit"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="15dp"
+                        android:text="Wedding Suit"
+                        android:textAlignment="center"
+                        android:textStyle="italic" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear2_category_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linear1_category_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/wedding_foods"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/food" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/wedding_foods"
+                        android:layout_marginTop="5dp"
+                        android:text="Wedding Cathering"
+                        android:textStyle="italic" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/wedding_wo"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/event" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/wedding_wo"
+                        android:layout_marginTop="5dp"
+                        android:text="Wedding Organizer"
+                        android:textAlignment="center"
+                        android:textStyle="italic" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear3_category_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linear2_category_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/wedding_decor"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/decor" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/wedding_decor"
+                        android:layout_marginTop="5dp"
+                        android:text="Wedding Decoration"
+                        android:textStyle="italic" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/wedding_music"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/music" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/wedding_music"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:text="Entertainment"
+                        android:textAlignment="center"
+                        android:textStyle="italic" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear4_category_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linear3_category_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/wedding_photography"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/photography" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/wedding_photography"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Photographer"
+                        android:textStyle="italic" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/wedding_makeup"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:layout_margin="7dp"
+                        android:src="@drawable/makeup" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/wedding_makeup"
+                        android:layout_marginTop="5dp"
+                        android:text="Wedding Make Up"
+                        android:textAlignment="center"
+                        android:textStyle="italic" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <ImageView
+        android:id="@+id/logout_button"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_margin="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/logout"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+</RelativeLayout>

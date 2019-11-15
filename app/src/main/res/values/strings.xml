@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">WeddingOrganizer</string>
+    <string name="app_slogan">Choose and Find Your Best Wedding Dream</string>
+    <string name="remember_me">Remember me</string>
+    <string name="forget_password">Forget Password?</string>
+    <string name="already_have_an_account_login">Already have an Account? Login</string>
+    <string name="login">Login</string>
+    <string name="join_now">Join Now</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="password">Password</string>
+    <string name="login_as_admin">Login As Admin</string>
+    <string name="i_m_not_an_admin">I\'m not an Admin</string>
+    <string name="create_a_account">Create Account</string>
+    <string name="name">Name</string>
+    <string name="name_empty">Please Write Your Name...</string>
+    <string name="phone_empty">Please Write Your Phone Number...</string>
+    <string name="pass_empty">Please Write Your Password...</string>
+    <string name="network_error">Network Error: Please Try Again</string>
+    <string name="login_account">Login Account</string>
+    <string name="login_success">Logged in Succesfully...</string>
+    <string name="logout">Logout</string>
+    <string name="password_incorrect">Password is Incorrect</string>
+    <string name="already_login">Already Logged in</string>
+    <string name="login_admin">Login Admin</string>
+    <string name="add_new_product">Add New Product</string>
+</resources>

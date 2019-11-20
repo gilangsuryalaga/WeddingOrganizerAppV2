@@ -16,12 +16,15 @@ public class AdminCategoryActivity extends AppCompatActivity {
     private ImageView dress, suit, foods, organizer;
     private ImageView decor, music, makeup, photography;
 
+    private Button CheckOrderBtn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_category);
 
         logoutBtn = (ImageView) findViewById(R.id.logout_button);
+        CheckOrderBtn = (Button) findViewById(R.id.check_orders);
 
         dress = (ImageView) findViewById(R.id.wedding_dress);
         suit = (ImageView) findViewById(R.id.wedding_suit);
@@ -31,6 +34,7 @@ public class AdminCategoryActivity extends AppCompatActivity {
         music = (ImageView) findViewById(R.id.wedding_music);
         makeup = (ImageView) findViewById(R.id.wedding_makeup);
         photography = (ImageView) findViewById(R.id.wedding_photography);
+
 
 
         photography.setOnClickListener(new View.OnClickListener() {
@@ -107,12 +111,21 @@ public class AdminCategoryActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Paper.book().destroy();
+//                Paper.book().destroy();
                 Intent intent = new Intent(AdminCategoryActivity.this, MainActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
+                finish();
             }
         });
 
+        CheckOrderBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AdminCategoryActivity.this, AdminNewOrdersActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

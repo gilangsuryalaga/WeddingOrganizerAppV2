@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (UserPhoneKey != "" && UserPasswordKey != "") {
             if (!TextUtils.isEmpty(UserPhoneKey) && !TextUtils.isEmpty(UserPasswordKey)) {
+
                 AllowAccess(UserPhoneKey, UserPasswordKey);
 
                 loadingBar.setTitle(R.string.already_login);
@@ -81,10 +82,13 @@ public class MainActivity extends AppCompatActivity {
 
                     if (usersdata.getPhone().equals(phone)) {
                         if (usersdata.getPassword().equals(password)) {
+
+
                             Toast.makeText(MainActivity.this, "Please Wait, You are already logged in...", Toast.LENGTH_SHORT).show();
                             loadingBar.dismiss();
 
                             Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+                            Prevalent.currentonlineUser = usersdata;
                             startActivity(intent);
 
                         } else {

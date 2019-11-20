@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="27dp"
+        android:layout_marginTop="15dp"
         android:text="@string/add_new_product"
         android:textAlignment="center"
         android:textSize="26sp"
@@ -22,8 +22,8 @@
 
     <ScrollView
         android:id="@+id/scroll"
-        android:layout_marginTop="10dp"
         android:layout_below="@id/slogan_category"
+        android:layout_above="@id/check_orders"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -38,9 +38,7 @@
                 android:id="@+id/linear1_category_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/slogan_category"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"
                 android:gravity="center"
                 android:orientation="horizontal">
 
@@ -100,7 +98,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/linear1_category_layout"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:orientation="horizontal">
 
@@ -156,7 +154,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/linear2_category_layout"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:orientation="horizontal">
 
@@ -213,7 +211,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/linear3_category_layout"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:orientation="horizontal">
 
@@ -269,10 +267,33 @@
         android:id="@+id/logout_button"
         android:layout_width="25dp"
         android:layout_height="25dp"
-        android:layout_margin="10dp"
+        android:layout_margin="20dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:src="@drawable/logout"
         android:textSize="20sp"
         android:textStyle="bold" />
+    <ImageView
+        android:id="@+id/list_button"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_margin="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/logout"
+        android:visibility="invisible"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+    <Button
+        android:id="@+id/check_orders"
+        android:background="@color/colorPrimaryDark"
+        android:text="Check New Orders"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:textAllCaps="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"/>
 </RelativeLayout>

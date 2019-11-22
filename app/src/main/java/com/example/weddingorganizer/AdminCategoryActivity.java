@@ -1,7 +1,9 @@
 package com.example.weddingorganizer;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -16,15 +18,17 @@ public class AdminCategoryActivity extends AppCompatActivity {
     private ImageView dress, suit, foods, organizer;
     private ImageView decor, music, makeup, photography;
 
-    private Button CheckOrderBtn;
+    private Button CheckOrderBtn, MaintainProductsBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_category);
 
+
         logoutBtn = (ImageView) findViewById(R.id.logout_button);
         CheckOrderBtn = (Button) findViewById(R.id.check_orders);
+        MaintainProductsBtn = (Button) findViewById(R.id.maintain_btn);
 
         dress = (ImageView) findViewById(R.id.wedding_dress);
         suit = (ImageView) findViewById(R.id.wedding_suit);
@@ -36,6 +40,14 @@ public class AdminCategoryActivity extends AppCompatActivity {
         photography = (ImageView) findViewById(R.id.wedding_photography);
 
 
+        MaintainProductsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AdminCategoryActivity.this, HomeActivity.class);
+                intent.putExtra("Admin", "Admin");
+                startActivity(intent);
+            }
+        });
 
         photography.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -110,12 +122,25 @@ public class AdminCategoryActivity extends AppCompatActivity {
         logoutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-//                Paper.book().destroy();
-                Intent intent = new Intent(AdminCategoryActivity.this, MainActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                startActivity(intent);
-                finish();
+                AlertDialog.Builder builder = new AlertDialog.Builder(AdminCategoryActivity.this);
+                builder.setTitle("Are you sure you want to leave?");
+                builder.setCancelable(true);
+                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Intent intent = new Intent(AdminCategoryActivity.this, MainActivity.class);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                        startActivity(intent);
+                        finish();
+                    }
+                })
+                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                dialogInterface.dismiss();
+                            }
+                        });
+                builder.show();
             }
         });
 
@@ -130,6 +155,24 @@ public class AdminCategoryActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-
+        AlertDialog.Builder builder = new AlertDialog.Builder(AdminCategoryActivity.this);
+        builder.setTitle("Are you sure you want to leave?");
+        builder.setCancelable(true);
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Intent intent = new Intent(AdminCategoryActivity.this, MainActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
+                finish();
+            }
+        })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.dismiss();
+                    }
+                });
+        builder.show();
     }
 }

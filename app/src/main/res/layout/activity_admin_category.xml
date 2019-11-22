@@ -14,16 +14,16 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
         android:text="@string/add_new_product"
         android:textAlignment="center"
-        android:textSize="26sp"
+        android:textSize="20sp"
         android:textStyle="bold" />
 
     <ScrollView
         android:id="@+id/scroll"
         android:layout_below="@id/slogan_category"
-        android:layout_above="@id/check_orders"
+        android:layout_above="@id/maintain_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -31,7 +31,7 @@
             android:id="@+id/tempat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:padding="10dp"
             android:orientation="vertical">
 
             <LinearLayout
@@ -267,7 +267,7 @@
         android:id="@+id/logout_button"
         android:layout_width="25dp"
         android:layout_height="25dp"
-        android:layout_margin="20dp"
+        android:layout_margin="10dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:src="@drawable/logout"
@@ -288,12 +288,28 @@
         android:id="@+id/check_orders"
         android:background="@color/colorPrimaryDark"
         android:text="Check New Orders"
+        android:layout_margin="10dp"
         android:textColor="@android:color/white"
         android:textSize="20dp"
-        android:layout_marginTop="10dp"
         android:textAllCaps="false"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"/>
+
+
+    <Button
+        android:id="@+id/maintain_btn"
+        android:background="@color/colorPrimaryDark"
+        android:text="Edit Products"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        android:textAllCaps="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/check_orders"/>
 </RelativeLayout>

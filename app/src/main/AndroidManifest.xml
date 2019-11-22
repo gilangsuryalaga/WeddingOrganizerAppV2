@@ -13,26 +13,32 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AdminMaintainProductsActivity"></activity>
-        <activity android:name=".SearchProductActivity" />
-        <activity android:name=".AdminUserProductsActivity" />
-        <activity android:name=".AdminNewOrdersActivity" />
-        <activity android:name=".ConfirmFinalOrderActivity" />
-        <activity android:name=".CartActivity" />
-        <activity android:name=".ProductDetailsActivity" />
-        <activity android:name=".SettingsActivity" />
+        <activity android:name=".AdminMaintainProductsActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".SearchProductActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".AdminUserProductsActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".AdminNewOrdersActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ConfirmFinalOrderActivity" android:screenOrientation="portrait" />
+        <activity android:name=".CartActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ProductDetailsActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".SettingsActivity" android:screenOrientation="portrait"/>
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
             android:theme="@style/Base.Theme.AppCompat" />
         <activity
             android:name=".HomeActivity"
             android:label="@string/title_activity_home"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".AdminCategoryActivity" />
-        <activity android:name=".AdminAddNewProductActivity" />
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".loginActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".AdminCategoryActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".AdminAddNewProductActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".RegisterActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".loginActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

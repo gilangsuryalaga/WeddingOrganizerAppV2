@@ -1,4 +1,4 @@
-package com.example.weddingorganizer;
+package com.example.weddingorganizer.Admin;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 
 import com.example.weddingorganizer.Model.Cart;
 import com.example.weddingorganizer.Model.Products;
+import com.example.weddingorganizer.R;
 import com.example.weddingorganizer.ViewHolder.CartViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;

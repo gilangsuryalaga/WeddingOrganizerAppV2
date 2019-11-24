@@ -1,4 +1,4 @@
-package com.example.weddingorganizer;
+package com.example.weddingorganizer.Admin;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.weddingorganizer.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
@@ -24,7 +25,7 @@ import java.util.HashMap;
 
 public class AdminMaintainProductsActivity extends AppCompatActivity {
 
-    private Button applyChangesBtn;
+    private Button applyChangesBtn, deleteBtn;
     private EditText name, price, description;
     private ImageView imageView;
     private String productId = "";
@@ -44,13 +45,32 @@ public class AdminMaintainProductsActivity extends AppCompatActivity {
         price = (EditText) findViewById(R.id.product_price_maintain);
         description = (EditText) findViewById(R.id.product_description_maintain);
         imageView = (ImageView) findViewById(R.id.product_image_maintain);
-
+        deleteBtn = (Button) findViewById(R.id.delete_product_btn);
         displaySpecificProductInfo();
+
+        deleteBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                deleteThisProduct();
+            }
+        });
 
         applyChangesBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 applyChanges();
+            }
+        });
+    }
+
+    private void deleteThisProduct() {
+        productsRef.removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                Toast.makeText(AdminMaintainProductsActivity.this, "Deleted Successfully", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(AdminMaintainProductsActivity.this, AdminCategoryActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
     }

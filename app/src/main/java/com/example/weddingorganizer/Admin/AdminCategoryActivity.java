@@ -1,4 +1,4 @@
-package com.example.weddingorganizer;
+package com.example.weddingorganizer.Admin;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,9 +9,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
 
-import io.paperdb.Paper;
+import com.example.weddingorganizer.HomeActivity;
+import com.example.weddingorganizer.MainActivity;
+import com.example.weddingorganizer.R;
 
 public class AdminCategoryActivity extends AppCompatActivity {
     private ImageView logoutBtn;

@@ -4,13 +4,13 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.weddingorganizer.Admin.AdminMaintainProductsActivity;
 import com.example.weddingorganizer.Model.Products;
 import com.example.weddingorganizer.Prevalent.Prevalent;
 import com.example.weddingorganizer.ViewHolder.ProductViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -20,10 +20,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
 import androidx.core.view.GravityCompat;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.database.DatabaseReference;
@@ -79,8 +75,11 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(HomeActivity.this, CartActivity.class);
-                startActivity(intent);
+                if (!type.equals("Admin"))
+                {
+                    Intent intent = new Intent(HomeActivity.this, CartActivity.class);
+                    startActivity(intent);
+                }
             }
         });
 
@@ -232,40 +231,58 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         int id = menuItem.getItemId();
 
         if (id == R.id.nav_cart) {
-            Intent intent = new Intent(HomeActivity.this, CartActivity.class);
-            startActivity(intent);
+            if (!type.equals("Admin"))
+            {
+                Intent intent = new Intent(HomeActivity.this, CartActivity.class);
+                startActivity(intent);
+
+            }
         } else if (id == R.id.nav_search) {
-            Intent intent = new Intent(HomeActivity.this, SearchProductActivity.class);
-            startActivity(intent);
+            if (!type.equals("Admin"))
+            {
+                Intent intent = new Intent(HomeActivity.this, SearchProductActivity.class);
+                startActivity(intent);
+
+            }
 
         } else if (id == R.id.nav_categories) {
+            if (!type.equals("Admin"))
+            {
 
+            }
         } else if (id == R.id.nav_settings) {
+            if (!type.equals("Admin"))
+            {
+                Intent intent = new Intent(HomeActivity.this, SettingsActivity.class);
+                startActivity(intent);
 
-            Intent intent = new Intent(HomeActivity.this, SettingsActivity.class);
-            startActivity(intent);
+            }
 
         } else if (id == R.id.nav_logout) {
-            AlertDialog.Builder builder = new AlertDialog.Builder(HomeActivity.this);
-            builder.setTitle("Are you sure you want to leave?");
-            builder.setCancelable(true);
-            builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    Paper.book().destroy();
-                    Intent intent = new Intent(HomeActivity.this, MainActivity.class);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                    startActivity(intent);
-                    finish();
-                }
-            })
-                    .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialogInterface, int i) {
-                            dialogInterface.dismiss();
-                        }
-                    });
-            builder.show();
+            if (!type.equals("Admin"))
+            {
+                AlertDialog.Builder builder = new AlertDialog.Builder(HomeActivity.this);
+                builder.setTitle("Are you sure you want to leave?");
+                builder.setCancelable(true);
+                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Paper.book().destroy();
+                        Intent intent = new Intent(HomeActivity.this, MainActivity.class);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                        startActivity(intent);
+                        finish();
+                    }
+                })
+                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                dialogInterface.dismiss();
+                            }
+                        });
+                builder.show();
+            }
+
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

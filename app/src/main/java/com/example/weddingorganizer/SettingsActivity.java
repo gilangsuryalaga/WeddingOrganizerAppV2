@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -41,7 +42,7 @@ public class SettingsActivity extends AppCompatActivity {
     private CircleImageView profileImageView;
     private EditText fullNameEditText, userPhoneEditText, addressEditText;
     private TextView profileChangeTextBtn, closeTextBtn, saveTextBtn;
-
+    private Button securityQuestionBtn;
     private Uri imageUri;
     private String myUrl = "";
     private StorageReference storageProfilePictureRef;
@@ -58,12 +59,21 @@ public class SettingsActivity extends AppCompatActivity {
         fullNameEditText = (EditText) findViewById(R.id.settings_full_name);
         userPhoneEditText = (EditText) findViewById(R.id.settings_phone_number);
         addressEditText = (EditText) findViewById(R.id.settings_address);
-
+        securityQuestionBtn = (Button) findViewById(R.id.security_questions_btn);
         profileChangeTextBtn = (TextView) findViewById(R.id.profile_image_change);
         closeTextBtn = (TextView) findViewById(R.id.close_settings_btn);
         saveTextBtn = (TextView) findViewById(R.id.update_account_settings_btn);
 
         userInfoDisplay(profileImageView, fullNameEditText, userPhoneEditText, addressEditText);
+
+        securityQuestionBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SettingsActivity.this, ResetPasswordActivity.class);
+                intent.putExtra("settings", "check");
+                startActivity(intent);
+            }
+        });
 
         closeTextBtn.setOnClickListener(new View.OnClickListener() {
             @Override

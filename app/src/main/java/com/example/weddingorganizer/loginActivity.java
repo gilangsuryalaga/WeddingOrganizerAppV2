@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.media.audiofx.PresetReverb;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -15,6 +14,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.weddingorganizer.Admin.AdminCategoryActivity;
 import com.example.weddingorganizer.Model.Users;
 import com.example.weddingorganizer.Prevalent.Prevalent;
 import com.google.firebase.database.DataSnapshot;
@@ -23,14 +23,12 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import org.w3c.dom.Text;
-
 import io.paperdb.Paper;
 
 public class loginActivity extends AppCompatActivity {
 
     private EditText InputNumber, InputPassword;
-    private TextView AdminLink, NotAdminLink;
+    private TextView AdminLink, NotAdminLink, forgetPaswordLink;
     private Button loginBtn;
     private ProgressDialog loadingBar;
     private CheckBox chckbxRememberme;
@@ -48,11 +46,20 @@ public class loginActivity extends AppCompatActivity {
         loadingBar = new ProgressDialog(this);
 
         AdminLink = (TextView) findViewById(R.id.admin_panel_link);
+        forgetPaswordLink = (TextView) findViewById(R.id.forget_password_link);
         NotAdminLink = (TextView) findViewById(R.id.not_admin_panel_link);
         chckbxRememberme = (CheckBox) findViewById(R.id.remember_me_check);
 
         Paper.init(this);
 
+        forgetPaswordLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(loginActivity.this, ResetPasswordActivity.class);
+                intent.putExtra("login", "check");
+                startActivity(intent);
+            }
+        });
 
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override

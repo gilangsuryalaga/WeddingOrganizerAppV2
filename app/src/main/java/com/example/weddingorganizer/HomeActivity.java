@@ -135,7 +135,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                         NumberFormat formatter = new DecimalFormat("#,###");
                         holder.txtProductName.setText(products.getname());
                         String price = formatter.format(Integer.valueOf(products.getPrice()));
-                        holder.txtProductPrice.setText("Price: " + "Rp " + price);
+                        holder.txtProductPrice.setText("Rp " + price);
                         holder.txtProductDescription.setText(products.getDescription());
                         Picasso.get().load(products.getImage()).into(holder.imageView);
 

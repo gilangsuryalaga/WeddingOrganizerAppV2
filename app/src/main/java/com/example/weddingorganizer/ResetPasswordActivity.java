@@ -34,6 +34,7 @@ public class ResetPasswordActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_reset_password);
 
         check = getIntent().getStringExtra("check");
@@ -55,8 +56,11 @@ public class ResetPasswordActivity extends AppCompatActivity {
             titleQuestions.setText("Set Questions");
             pageTitle.setText("Please Answer for The Following Security Questions");
             verifyButton.setText("Set");
+
             displayPreviousAnswer();
+
             verifyButton.setOnClickListener(new View.OnClickListener() {
+
                 @Override
                 public void onClick(View view) {
                     setAnswer();
@@ -67,6 +71,7 @@ public class ResetPasswordActivity extends AppCompatActivity {
             phoneNumber.setVisibility(View.VISIBLE);
 
             verifyButton.setOnClickListener(new View.OnClickListener() {
+
                 @Override
                 public void onClick(View view) {
                     verifyUsers();
@@ -87,6 +92,7 @@ public class ResetPasswordActivity extends AppCompatActivity {
                     .child(phone);
 
             ref.addValueEventListener(new ValueEventListener() {
+
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                     if (dataSnapshot.exists()) {
@@ -98,8 +104,10 @@ public class ResetPasswordActivity extends AppCompatActivity {
 
                             if (!ans1.equals(answer1)) {
                                 Toast.makeText(ResetPasswordActivity.this, "Your First Answer is incorrect", Toast.LENGTH_SHORT).show();
+
                             } else if (!ans2.equals(answer2)) {
                                 Toast.makeText(ResetPasswordActivity.this, "Your Second Answer is incorrect", Toast.LENGTH_SHORT).show();
+
                             } else {
                                 final AlertDialog.Builder builder = new AlertDialog.Builder(ResetPasswordActivity.this);
                                 builder.setTitle("New Password");
@@ -109,12 +117,14 @@ public class ResetPasswordActivity extends AppCompatActivity {
                                 builder.setView(newPassword);
 
                                 builder.setPositiveButton("Change", new DialogInterface.OnClickListener() {
+
                                     @Override
                                     public void onClick(final DialogInterface dialogInterface, int i) {
                                         if (!newPassword.getText().toString().equals("")) {
                                             ref.child("password")
                                                     .setValue(newPassword.getText().toString())
                                                     .addOnCompleteListener(new OnCompleteListener<Void>() {
+
                                                         @Override
                                                         public void onComplete(@NonNull Task<Void> task) {
                                                             if (task.isSuccessful()) {
@@ -129,16 +139,20 @@ public class ResetPasswordActivity extends AppCompatActivity {
                                     }
                                 });
                                 builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+
                                     @Override
                                     public void onClick(DialogInterface dialogInterface, int i) {
                                         dialogInterface.cancel();
                                     }
                                 });
+
                                 builder.show();
                             }
+
                         } else {
                             Toast.makeText(ResetPasswordActivity.this, "You have not set the security question", Toast.LENGTH_SHORT).show();
                         }
+
                     } else {
                         Toast.makeText(ResetPasswordActivity.this, "This Phone Number not exist", Toast.LENGTH_SHORT).show();
                     }
@@ -149,6 +163,7 @@ public class ResetPasswordActivity extends AppCompatActivity {
 
                 }
             });
+
         } else {
             Toast.makeText(this, "Please Complete the form", Toast.LENGTH_SHORT).show();
         }
@@ -162,6 +177,7 @@ public class ResetPasswordActivity extends AppCompatActivity {
 
         if (question1.equals("") && question2.equals("")) {
             Toast.makeText(ResetPasswordActivity.this, "Please answer both questions", Toast.LENGTH_SHORT).show();
+
         } else {
             DatabaseReference ref = FirebaseDatabase.getInstance().getReference()
                     .child("Users")
@@ -172,6 +188,7 @@ public class ResetPasswordActivity extends AppCompatActivity {
             userdataMap.put("answer2", answer2);
 
             ref.child("Security Questions").updateChildren(userdataMap).addOnCompleteListener(new OnCompleteListener<Void>() {
+
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
                     if (task.isSuccessful()) {
@@ -191,6 +208,7 @@ public class ResetPasswordActivity extends AppCompatActivity {
                 .child(Prevalent.currentonlineUser.getPhone());
 
         ref.child("Security Questions").addValueEventListener(new ValueEventListener() {
+
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists()) {

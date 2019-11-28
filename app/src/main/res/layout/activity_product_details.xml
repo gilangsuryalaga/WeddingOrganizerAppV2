@@ -3,10 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:padding="10dp"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
     tools:context=".ProductDetailsActivity">
 
     <ImageView
+        android:background="@drawable/bordersubitem"
+        android:layout_margin="5dp"
         android:id="@+id/product_image_details"
         android:layout_width="match_parent"
         android:layout_height="260dp"
@@ -15,13 +19,14 @@
     <TextView
         android:id="@+id/product_name_details"
         android:layout_width="match_parent"
+        android:textAllCaps="true"
         android:layout_height="wrap_content"
         android:layout_below="@id/product_image_details"
         android:layout_marginTop="10dp"
         android:gravity="center"
         android:text="Product Name"
         android:textColor="@android:color/black"
-        android:textSize="18sp"
+        android:textSize="30sp"
         android:textStyle="bold" />
 
     <TextView
@@ -32,7 +37,7 @@
         android:layout_marginTop="10dp"
         android:gravity="center"
         android:text="Product Description"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         android:textSize="16sp"
         android:textStyle="bold" />
 
@@ -44,8 +49,8 @@
         android:layout_marginTop="10dp"
         android:gravity="center"
         android:text="Product Price"
-        android:textColor="@android:color/black"
-        android:textSize="16sp"
+        android:textColor="#FB8C00"
+        android:textSize="20sp"
         android:textStyle="bold" />
 
     <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
@@ -68,7 +73,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_margin="15dp"
-        android:background="@color/colorPrimaryDark"
+        android:background="@drawable/border"
         android:text="Add to Cart"
         android:textColor="@android:color/white"
         android:textSize="18dp" />

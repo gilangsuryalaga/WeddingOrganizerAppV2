@@ -6,11 +6,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,6 +35,14 @@ public class loginActivity extends AppCompatActivity {
     private ProgressDialog loadingBar;
     private CheckBox chckbxRememberme;
     private String parentDbName = "Users";
+    RelativeLayout relay1;
+    Handler handler = new Handler();
+    Runnable runable = new Runnable() {
+        @Override
+        public void run() {
+            relay1.setVisibility(View.VISIBLE);
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +60,8 @@ public class loginActivity extends AppCompatActivity {
         NotAdminLink = (TextView) findViewById(R.id.not_admin_panel_link);
         chckbxRememberme = (CheckBox) findViewById(R.id.remember_me_check);
 
+        relay1 = (RelativeLayout) findViewById(R.id.rellay1);
+        handler.postDelayed( runable, 2000 );
         Paper.init(this);
 
         forgetPaswordLink.setOnClickListener(new View.OnClickListener() {

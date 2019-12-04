@@ -63,19 +63,23 @@ public class CartActivity extends AppCompatActivity {
         NextProccessBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                txtTotalAmount.setText("Total Price: Rp " + total);
-                Intent intent = new Intent(CartActivity.this, ConfirmFinalOrderActivity.class);
-                intent.putExtra("Total Price", total);
-                startActivity(intent);
-                finish();
+                if (total.equals("") || total.isEmpty()){
+                    Toasty.warning(CartActivity.this, "Your Cart is Empty", Toasty.LENGTH_SHORT,true).show();
+                }else {
+                    txtTotalAmount.setText("Total Price: Rp " + total);
+                    Intent intent = new Intent(CartActivity.this, ConfirmFinalOrderActivity.class);
+                    intent.putExtra("Total Price", total);
+                    startActivity(intent);
+                    finish();
+                }
             }
         });
     }
-
     @Override
     protected void onStart() {
         super.onStart();
         cekOrdersState();
+
         final DatabaseReference cartListRef = FirebaseDatabase.getInstance().getReference().child("Cart List");
         FirebaseRecyclerOptions<Cart> options =
                 new FirebaseRecyclerOptions.Builder<Cart>()
@@ -84,6 +88,7 @@ public class CartActivity extends AppCompatActivity {
                         .build();
         FirebaseRecyclerAdapter<Cart, CartViewHolder> adapter
                 = new FirebaseRecyclerAdapter<Cart, CartViewHolder>(options) {
+
 
             @Override
             protected void onBindViewHolder(@NonNull CartViewHolder holder, int i, @NonNull final Cart model) {

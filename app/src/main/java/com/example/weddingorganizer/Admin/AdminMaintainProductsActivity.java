@@ -23,6 +23,8 @@ import com.squareup.picasso.Picasso;
 
 import java.util.HashMap;
 
+import es.dmoral.toasty.Toasty;
+
 public class AdminMaintainProductsActivity extends AppCompatActivity {
 
     private Button applyChangesBtn, deleteBtn;
@@ -67,7 +69,7 @@ public class AdminMaintainProductsActivity extends AppCompatActivity {
         productsRef.removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
-                Toast.makeText(AdminMaintainProductsActivity.this, "Deleted Successfully", Toast.LENGTH_SHORT).show();
+                Toasty.success(AdminMaintainProductsActivity.this, "Deleted Successfully", Toasty.LENGTH_SHORT, true).show();
                 Intent intent = new Intent(AdminMaintainProductsActivity.this, AdminCategoryActivity.class);
                 startActivity(intent);
                 finish();
@@ -82,11 +84,11 @@ public class AdminMaintainProductsActivity extends AppCompatActivity {
         String descriptionChanges = description.getText().toString();
 
         if (nameChanges.equals("")) {
-            Toast.makeText(this, "Please Write Down The product name", Toast.LENGTH_SHORT).show();
+            Toasty.warning(this, "Please Write Down The product name", Toast.LENGTH_SHORT, true).show();
         } else if (priceChanges.equals("")) {
-            Toast.makeText(this, "Please Write Down The product price", Toast.LENGTH_SHORT).show();
+            Toasty.warning(this, "Please Write Down The product price", Toast.LENGTH_SHORT, true).show();
         } else if (descriptionChanges.equals("")) {
-            Toast.makeText(this, "Please Write Down The product description", Toast.LENGTH_SHORT).show();
+            Toasty.warning(this, "Please Write Down The product description", Toast.LENGTH_SHORT, true).show();
         }else{
 
             HashMap<String, Object> productMap = new HashMap<>();
@@ -99,7 +101,7 @@ public class AdminMaintainProductsActivity extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
                     if (task.isSuccessful()){
-                        Toast.makeText(AdminMaintainProductsActivity.this, "Changes applied successfully", Toast.LENGTH_SHORT).show();
+                        Toasty.success(AdminMaintainProductsActivity.this, "Changes applied successfully", Toast.LENGTH_SHORT, true).show();
 
                         Intent intent = new Intent(AdminMaintainProductsActivity.this, AdminCategoryActivity.class);
                         startActivity(intent);

@@ -31,6 +31,8 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.HashMap;
 
+import es.dmoral.toasty.Toasty;
+
 public class AdminAddNewProductActivity extends AppCompatActivity {
     private String CategoryName, Description, Price, Pname, saveCurrentDate, saveCurrentTime;
     private Button AddNewProductBtn;
@@ -81,13 +83,13 @@ public class AdminAddNewProductActivity extends AppCompatActivity {
         Pname = InputProductName.getText().toString();
 
         if (ImageUri == null) {
-            Toast.makeText(AdminAddNewProductActivity.this, "Product Image is required...", Toast.LENGTH_SHORT).show();
+            Toasty.warning(AdminAddNewProductActivity.this, "Product Image is required...", Toasty.LENGTH_SHORT,true).show();
         } else if (TextUtils.isEmpty(Description)) {
-            Toast.makeText(AdminAddNewProductActivity.this, "Product Description is required...", Toast.LENGTH_SHORT).show();
+            Toasty.warning(AdminAddNewProductActivity.this, "Product Description is required...", Toasty.LENGTH_SHORT,true).show();
         } else if (TextUtils.isEmpty(Price)) {
-            Toast.makeText(AdminAddNewProductActivity.this, "Product Price is required...", Toast.LENGTH_SHORT).show();
+            Toasty.warning(AdminAddNewProductActivity.this, "Product Price is required...", Toasty.LENGTH_SHORT,true).show();
         } else if (TextUtils.isEmpty(Pname)) {
-            Toast.makeText(AdminAddNewProductActivity.this, "Product Product Name is required...", Toast.LENGTH_SHORT).show();
+            Toasty.warning(AdminAddNewProductActivity.this, "Product Name is required...", Toasty.LENGTH_SHORT,true).show();
         } else {
             StoreProductInformation();
         }
@@ -117,14 +119,13 @@ public class AdminAddNewProductActivity extends AppCompatActivity {
             @Override
             public void onFailure(@NonNull Exception e) {
                 String message = e.toString();
-                Toast.makeText(AdminAddNewProductActivity.this, "Error: " + message, Toast.LENGTH_SHORT).show();
+                Toasty.error(AdminAddNewProductActivity.this,"Error:" + message, Toasty.LENGTH_SHORT, true).show();
                 loadingBar.dismiss();
             }
         }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                Toast.makeText(AdminAddNewProductActivity.this, "Product Image Uploaded Successfully...", Toast.LENGTH_SHORT).show();
-
+                Toasty.success(AdminAddNewProductActivity.this,"Product Image Uploaded Successfully...", Toasty.LENGTH_SHORT , true).show();
                 Task<Uri> uriTask = uploadTask.continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>() {
                     @Override
                     public Task<Uri> then(@NonNull Task<UploadTask.TaskSnapshot> task) throws Exception {
@@ -139,8 +140,7 @@ public class AdminAddNewProductActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<Uri> task) {
                         if (task.isSuccessful()) {
                             downloadImageUrl = task.getResult().toString();
-                            Toast.makeText(AdminAddNewProductActivity.this, "Get Product Image Url Successfully...", Toast.LENGTH_SHORT).show();
-
+//                            Toast.makeText(AdminAddNewProductActivity.this, "Get Product Image Url Successfully...", Toast.LENGTH_SHORT).show();
                             saveProductInfoToDatabase();
                         }
                     }
@@ -171,11 +171,11 @@ public class AdminAddNewProductActivity extends AppCompatActivity {
                             startActivity(intent);
 
                             loadingBar.dismiss();
-                            Toast.makeText(AdminAddNewProductActivity.this, "Product is Added Successfully...", Toast.LENGTH_SHORT).show();
+                            Toasty.success(AdminAddNewProductActivity.this,"Product is Added Successfully...", Toast.LENGTH_SHORT, true).show();
                         } else {
                             loadingBar.dismiss();
                             String message = task.getException().toString();
-                            Toast.makeText(AdminAddNewProductActivity.this, "Error: " + message, Toast.LENGTH_SHORT).show();
+                            Toasty.error(AdminAddNewProductActivity.this,"Error :" + message, Toast.LENGTH_SHORT, true).show();
                         }
                     }
                 });

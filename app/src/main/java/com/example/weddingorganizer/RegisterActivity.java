@@ -22,6 +22,8 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.HashMap;
 
+import es.dmoral.toasty.Toasty;
+
 public class RegisterActivity extends AppCompatActivity {
 
     private Button createAccountBtn;
@@ -53,11 +55,11 @@ public class RegisterActivity extends AppCompatActivity {
         String password = InputPassword.getText().toString();
 
         if (TextUtils.isEmpty(name)) {
-            Toast.makeText(this, getString(R.string.name_empty), Toast.LENGTH_SHORT).show();
+            Toasty.warning(this, getString(R.string.name_empty), Toast.LENGTH_SHORT, true).show();
         } else if (TextUtils.isEmpty(phone)) {
-            Toast.makeText(this, getString(R.string.phone_empty), Toast.LENGTH_SHORT).show();
+            Toasty.warning(this, getString(R.string.phone_empty), Toast.LENGTH_SHORT, true).show();
         } else if (TextUtils.isEmpty(password)) {
-            Toast.makeText(this, getString(R.string.pass_empty), Toast.LENGTH_SHORT).show();
+            Toasty.warning(this, getString(R.string.pass_empty), Toast.LENGTH_SHORT, true).show();
         } else {
             loadingBar.setTitle(R.string.create_a_account);
             loadingBar.setMessage("Please Wait, We are checking the credentials");
@@ -87,22 +89,21 @@ public class RegisterActivity extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if(task.isSuccessful()){
-                                        Toast.makeText(RegisterActivity.this, "Congratulations, your account has been Created", Toast.LENGTH_SHORT).show();
+                                        Toasty.success(RegisterActivity.this, "Register Successfully", Toast.LENGTH_SHORT, true).show();
                                         loadingBar.dismiss();
 
                                         Intent intent = new Intent(RegisterActivity.this, loginActivity.class);
                                         startActivity(intent);
                                     }else{
                                         loadingBar.dismiss();
-                                        Toast.makeText(RegisterActivity.this,getString(R.string.network_error), Toast.LENGTH_SHORT).show();
+                                        Toasty.error(RegisterActivity.this,getString(R.string.network_error), Toast.LENGTH_SHORT, true).show();
                                     }
                                 }
                             });
                 } else {
-                    Toast.makeText(RegisterActivity.this, "This " + phone + " Already exists", Toast.LENGTH_SHORT).show();
+                    Toasty.warning(RegisterActivity.this, "This " + phone + " Already exists", Toast.LENGTH_SHORT, true).show();
                     loadingBar.dismiss();
-                    Toast.makeText(RegisterActivity.this, "Please Try again using another phone number", Toast.LENGTH_SHORT).show();
-
+                    Toasty.warning(RegisterActivity.this, "Please Try again using another phone number", Toast.LENGTH_SHORT, true).show();
                     Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
                     startActivity(intent);
                 }

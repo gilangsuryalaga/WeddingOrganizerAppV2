@@ -30,6 +30,8 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.HashMap;
 
+import es.dmoral.toasty.Toasty;
+
 public class ProductDetailsActivity extends AppCompatActivity {
 
     private ImageView productImage;
@@ -62,8 +64,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
 
                 if (state.equals("Order Placed") || state.equals("Order Shipped")) {
 
-                    Toast.makeText(ProductDetailsActivity.this, "Please Wait your Previous Order is Completed", Toast.LENGTH_LONG).show();
-
+                    Toasty.info(ProductDetailsActivity.this, "Please Wait your Previous Order is Completed", Toast.LENGTH_SHORT, true).show();
                 } else {
 
                     addingToCartList();
@@ -116,8 +117,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
                                         public void onComplete(@NonNull Task<Void> task) {
                                             if (task.isSuccessful()) {
 
-                                                Toast.makeText(ProductDetailsActivity.this, "Added To Cart List", Toast.LENGTH_SHORT).show();
-
+                                                Toasty.success(ProductDetailsActivity.this, "Added To Cart List", Toast.LENGTH_SHORT, true).show();
                                                 Intent intent = new Intent(ProductDetailsActivity.this, HomeActivity.class);
                                                 startActivity(intent);
                                             }

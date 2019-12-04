@@ -19,6 +19,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import es.dmoral.toasty.Toasty;
 import io.paperdb.Paper;
 
 public class MainActivity extends AppCompatActivity {
@@ -84,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
                         if (usersdata.getPassword().equals(password)) {
 
 
-                            Toast.makeText(MainActivity.this, "Please Wait, You are already logged in...", Toast.LENGTH_SHORT).show();
+                            Toasty.success(MainActivity.this, "You are already logged in...", Toast.LENGTH_SHORT, true).show();
                             loadingBar.dismiss();
 
                             Intent intent = new Intent(MainActivity.this, HomeActivity.class);
@@ -92,12 +93,12 @@ public class MainActivity extends AppCompatActivity {
                             startActivity(intent);
 
                         } else {
-                            Toast.makeText(MainActivity.this, getString(R.string.password_incorrect), Toast.LENGTH_SHORT).show();
+                            Toasty.error(MainActivity.this,getString(R.string.password_incorrect), Toast.LENGTH_SHORT).show();
                             loadingBar.dismiss();
                         }
                     }
                 } else {
-                    Toast.makeText(MainActivity.this, "Account with this " + phone + " number Do not Exists", Toast.LENGTH_SHORT).show();
+                    Toasty.error(MainActivity.this, "Account with this " + phone + " number Do not Exists", Toast.LENGTH_SHORT).show();
                     loadingBar.dismiss();
 
                 }

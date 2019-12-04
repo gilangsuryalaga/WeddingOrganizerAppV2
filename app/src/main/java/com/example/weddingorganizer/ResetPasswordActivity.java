@@ -24,6 +24,8 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.HashMap;
 
+import es.dmoral.toasty.Toasty;
+
 public class ResetPasswordActivity extends AppCompatActivity {
 
     private String check = "";
@@ -103,10 +105,9 @@ public class ResetPasswordActivity extends AppCompatActivity {
                             String ans2 = dataSnapshot.child("Security Questions").child("answer2").getValue().toString();
 
                             if (!ans1.equals(answer1)) {
-                                Toast.makeText(ResetPasswordActivity.this, "Your First Answer is incorrect", Toast.LENGTH_SHORT).show();
-
+                                Toasty.error(ResetPasswordActivity.this, "Your First Answer is incorrect", Toast.LENGTH_SHORT, true).show();
                             } else if (!ans2.equals(answer2)) {
-                                Toast.makeText(ResetPasswordActivity.this, "Your Second Answer is incorrect", Toast.LENGTH_SHORT).show();
+                                Toasty.error(ResetPasswordActivity.this, "Your Second Answer is incorrect", Toast.LENGTH_SHORT, true).show();
 
                             } else {
                                 final AlertDialog.Builder builder = new AlertDialog.Builder(ResetPasswordActivity.this);
@@ -129,7 +130,7 @@ public class ResetPasswordActivity extends AppCompatActivity {
                                                         public void onComplete(@NonNull Task<Void> task) {
                                                             if (task.isSuccessful()) {
                                                                 dialogInterface.dismiss();
-                                                                Toast.makeText(ResetPasswordActivity.this, "Password changed successfully", Toast.LENGTH_SHORT).show();
+                                                                Toasty.success(ResetPasswordActivity.this, "Password changed successfully", Toast.LENGTH_SHORT, true).show();
                                                                 Intent intent = new Intent(ResetPasswordActivity.this, loginActivity.class);
                                                                 startActivity(intent);
                                                             }
@@ -150,11 +151,11 @@ public class ResetPasswordActivity extends AppCompatActivity {
                             }
 
                         } else {
-                            Toast.makeText(ResetPasswordActivity.this, "You have not set the security question", Toast.LENGTH_SHORT).show();
-                        }
+                            Toasty.warning(ResetPasswordActivity.this, "You have not set the security question", Toast.LENGTH_SHORT, true).show();
+                            }
 
                     } else {
-                        Toast.makeText(ResetPasswordActivity.this, "This Phone Number not exist", Toast.LENGTH_SHORT).show();
+                        Toasty.error(ResetPasswordActivity.this, "This Phone Number not exist", Toast.LENGTH_SHORT, true).show();
                     }
                 }
 
@@ -165,7 +166,7 @@ public class ResetPasswordActivity extends AppCompatActivity {
             });
 
         } else {
-            Toast.makeText(this, "Please Complete the form", Toast.LENGTH_SHORT).show();
+            Toasty.warning(this, "Please Complete the form", Toast.LENGTH_SHORT, true).show();
         }
 
     }
@@ -176,8 +177,7 @@ public class ResetPasswordActivity extends AppCompatActivity {
         String answer2 = question2.getText().toString().toLowerCase();
 
         if (question1.equals("") && question2.equals("")) {
-            Toast.makeText(ResetPasswordActivity.this, "Please answer both questions", Toast.LENGTH_SHORT).show();
-
+            Toasty.warning(ResetPasswordActivity.this, "Please answer both questions", Toast.LENGTH_SHORT, true).show();
         } else {
             DatabaseReference ref = FirebaseDatabase.getInstance().getReference()
                     .child("Users")
@@ -192,7 +192,7 @@ public class ResetPasswordActivity extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
                     if (task.isSuccessful()) {
-                        Toast.makeText(ResetPasswordActivity.this, "Security Question set Successfully", Toast.LENGTH_SHORT).show();
+                        Toasty.success(ResetPasswordActivity.this, "Security Question set Successfully", Toast.LENGTH_SHORT, true).show();
                         Intent intent = new Intent(ResetPasswordActivity.this, HomeActivity.class);
                         startActivity(intent);
                     }

@@ -36,6 +36,7 @@ import org.w3c.dom.Text;
 import java.util.HashMap;
 
 import de.hdodenhof.circleimageview.CircleImageView;
+import es.dmoral.toasty.Toasty;
 
 public class SettingsActivity extends AppCompatActivity {
 
@@ -114,7 +115,7 @@ public class SettingsActivity extends AppCompatActivity {
         ref.child(Prevalent.currentonlineUser.getPhone()).updateChildren(userMap);
 
         startActivity(new Intent(SettingsActivity.this, HomeActivity.class));
-        Toast.makeText(SettingsActivity.this, "Profile Info Updated successfully", Toast.LENGTH_SHORT).show();
+        Toasty.success(SettingsActivity.this, "Profile Info Updated successfully", Toast.LENGTH_SHORT, true).show();
         finish();
 
     }
@@ -131,7 +132,7 @@ public class SettingsActivity extends AppCompatActivity {
             profileImageView.setImageURI(imageUri);
 
         } else {
-            Toast.makeText(this, "Error, Try Again.", Toast.LENGTH_SHORT).show();
+            Toasty.error(this, "Error, Try Again.", Toast.LENGTH_SHORT, true).show();
             startActivity(new Intent(SettingsActivity.this, SettingsActivity.class));
             finish();
         }
@@ -140,11 +141,11 @@ public class SettingsActivity extends AppCompatActivity {
     private void userInfoSaved() {
 
         if (TextUtils.isEmpty(fullNameEditText.getText().toString())) {
-            Toast.makeText(this, "Name is Empty", Toast.LENGTH_SHORT).show();
+            Toasty.warning(this, "Name is Empty", Toast.LENGTH_SHORT, true).show();
         } else if (TextUtils.isEmpty(addressEditText.getText().toString())) {
-            Toast.makeText(this, "Address is Empty", Toast.LENGTH_SHORT).show();
+            Toasty.warning(this, "Address is Empty", Toast.LENGTH_SHORT, true).show();
         } else if (TextUtils.isEmpty(userPhoneEditText.getText().toString())) {
-            Toast.makeText(this, "Phone is Empty", Toast.LENGTH_SHORT).show();
+            Toasty.warning(this, "Phone Number is Empty", Toast.LENGTH_SHORT, true).show();
         } else if (checker.equals("clicked")) {
             uploadImage();
         }
@@ -192,16 +193,16 @@ public class SettingsActivity extends AppCompatActivity {
                                 progressDialog.dismiss();
 
                                 startActivity(new Intent(SettingsActivity.this, HomeActivity.class));
-                                Toast.makeText(SettingsActivity.this, "Profile Info Updated successfully", Toast.LENGTH_SHORT).show();
+                                Toasty.success(SettingsActivity.this, "Profile Info Updated successfully", Toast.LENGTH_SHORT, true).show();
                                 finish();
                             } else {
                                 progressDialog.dismiss();
-                                Toast.makeText(SettingsActivity.this, "Error.", Toast.LENGTH_SHORT).show();
+                                Toasty.error(SettingsActivity.this, "Error.", Toast.LENGTH_SHORT, true).show();
                             }
                         }
                     });
         } else {
-            Toast.makeText(this, "Image is not Selected", Toast.LENGTH_SHORT).show();
+            Toasty.warning(this, "Image is not Selected", Toast.LENGTH_SHORT, true).show();
         }
     }
 

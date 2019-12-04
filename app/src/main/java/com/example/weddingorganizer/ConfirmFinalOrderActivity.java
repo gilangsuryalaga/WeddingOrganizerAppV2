@@ -21,6 +21,8 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.HashMap;
 
+import es.dmoral.toasty.Toasty;
+
 public class ConfirmFinalOrderActivity extends AppCompatActivity {
 
     private EditText nameEditText, phoneEditText, addressEditText, cityEditTxt;
@@ -38,7 +40,8 @@ public class ConfirmFinalOrderActivity extends AppCompatActivity {
         addressEditText = (EditText) findViewById(R.id.shipment_address);
         totalAmount = getIntent().getStringExtra("Total Price");
         cityEditTxt = (EditText) findViewById(R.id.shipment_city);
-        Toast.makeText(this, "Total Price: Rp " + totalAmount, Toast.LENGTH_SHORT).show();
+       // Toast.makeText(this, "Total Price: Rp " + totalAmount, Toast.LENGTH_SHORT).show();
+        Toasty.success(this, "Total Price: Rp " + totalAmount, Toast.LENGTH_SHORT, true).show();
 
         confirmOrderBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,13 +54,13 @@ public class ConfirmFinalOrderActivity extends AppCompatActivity {
 
     private void Check() {
         if (TextUtils.isEmpty(nameEditText.getText().toString())) {
-            Toast.makeText(this, "Please Input your full name", Toast.LENGTH_SHORT).show();
+            Toasty.warning(this, "Please Input your full name", Toast.LENGTH_SHORT, true).show();
         } else if (TextUtils.isEmpty(phoneEditText.getText().toString())) {
-            Toast.makeText(this, "Please Input your phone number", Toast.LENGTH_SHORT).show();
+            Toasty.warning(this, "Please Input your Phone Number ", Toast.LENGTH_SHORT, true).show();
         } else if (TextUtils.isEmpty(addressEditText.getText().toString())) {
-            Toast.makeText(this, "Please Input your Address", Toast.LENGTH_SHORT).show();
+            Toasty.warning(this, "Please Input your full Address", Toast.LENGTH_SHORT, true).show();
         } else if (TextUtils.isEmpty(cityEditTxt.getText().toString())) {
-            Toast.makeText(this, "Please Input your City name", Toast.LENGTH_SHORT).show();
+            Toasty.warning(this, "Please Input your city name", Toast.LENGTH_SHORT, true).show();
         } else {
             ConfirmOrder();
         }
@@ -100,8 +103,7 @@ public class ConfirmFinalOrderActivity extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()){
-                                        Toast.makeText(ConfirmFinalOrderActivity.this, "Orders Has Been Confirmed", Toast.LENGTH_SHORT).show();
-
+                                        Toasty.success(ConfirmFinalOrderActivity.this, "Orders Has Been Confirmed", Toast.LENGTH_SHORT, true).show();
                                         Intent intent = new Intent(ConfirmFinalOrderActivity.this,HomeActivity.class);
                                         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                         startActivity(intent);

@@ -33,6 +33,8 @@ import com.google.firebase.database.ValueEventListener;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 
+import es.dmoral.toasty.Toasty;
+
 public class CartActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
@@ -123,8 +125,7 @@ public class CartActivity extends AppCompatActivity {
                                                 @Override
                                                 public void onComplete(@NonNull Task<Void> task) {
                                                     if (task.isSuccessful()) {
-                                                        Toast.makeText(CartActivity.this, "Item removed Successfully", Toast.LENGTH_SHORT).show();
-
+                                                        Toasty.success(CartActivity.this, "Item removed Successfully", Toast.LENGTH_SHORT, true).show();
                                                         Intent intent = new Intent(CartActivity.this, CartActivity.class);
                                                         startActivity(intent);
                                                     }
@@ -171,9 +172,7 @@ public class CartActivity extends AppCompatActivity {
                         txtmsg.setVisibility(View.VISIBLE);
                         txtmsg.setText("Congratulation, Shipped Successfully... Wait for Verified by Admin");
                         NextProccessBtn.setVisibility(View.GONE);
-
-                        Toast.makeText(CartActivity.this, "Please Wait Until The Order is Completed for Purchase another Products", Toast.LENGTH_SHORT).show();
-
+                        Toasty.info(CartActivity.this, "Please Wait Until The Order is Completed for Purchase another Products", Toast.LENGTH_SHORT, true).show();
                     } else if (shippingsState.equals("not shipped")) {
                         txtTotalAmount.setText("Your Orders is Not Shipped yet");
                         recyclerView.setVisibility(View.GONE);
@@ -181,7 +180,7 @@ public class CartActivity extends AppCompatActivity {
                         txtmsg.setVisibility(View.VISIBLE);
                         NextProccessBtn.setVisibility(View.GONE);
 
-                        Toast.makeText(CartActivity.this, "Please Wait Until The Order is Completed for Purchase another Products", Toast.LENGTH_SHORT).show();
+                        Toasty.info(CartActivity.this, "Please Wait Until The Order is Completed for Purchase another Products", Toast.LENGTH_SHORT, true).show();
 
 
                     }

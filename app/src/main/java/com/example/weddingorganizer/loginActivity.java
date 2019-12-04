@@ -25,6 +25,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import es.dmoral.toasty.Toasty;
 import io.paperdb.Paper;
 
 public class loginActivity extends AppCompatActivity {
@@ -113,16 +114,16 @@ public class loginActivity extends AppCompatActivity {
 
         if (TextUtils.isEmpty(phone)) {
 
-            Toast.makeText(this, getString(R.string.phone_empty), Toast.LENGTH_SHORT).show();
+            Toasty.warning(this, getString(R.string.phone_empty), Toast.LENGTH_SHORT, true).show();
 
         } else if (TextUtils.isEmpty(password)) {
+            Toasty.warning(this, getString(R.string.pass_empty), Toast.LENGTH_SHORT, true).show();
 
-            Toast.makeText(this, getString(R.string.pass_empty), Toast.LENGTH_SHORT).show();
 
         } else {
 
             loadingBar.setTitle(R.string.login_account);
-            loadingBar.setMessage("Please Wait, We are checking the credentials");
+            loadingBar.setMessage("Please Wait...");
             loadingBar.setCanceledOnTouchOutside(false);
             loadingBar.show();
 
@@ -153,7 +154,7 @@ public class loginActivity extends AppCompatActivity {
                         if (usersdata.getPassword().equals(password)) {
                             if (parentDbName.equals("Admins")) {
 
-                                Toast.makeText(loginActivity.this, "Welcome Admin, You are Logged in Successfully...", Toast.LENGTH_SHORT).show();
+                                Toasty.success(loginActivity.this, "Welcome Admin, You are Logged in Successfully...", Toast.LENGTH_SHORT, true).show();
                                 loadingBar.dismiss();
 
                                 Intent intent = new Intent(loginActivity.this, AdminCategoryActivity.class);
@@ -161,7 +162,8 @@ public class loginActivity extends AppCompatActivity {
 
                             } else if (parentDbName.equals("Users")) {
 
-                                Toast.makeText(loginActivity.this, getString(R.string.login_success), Toast.LENGTH_SHORT).show();
+                                Toasty.success(loginActivity.this, getString(R.string.login_success), Toast.LENGTH_SHORT, true).show();
+
                                 loadingBar.dismiss();
 
                                 Intent intent = new Intent(loginActivity.this, HomeActivity.class);
@@ -170,15 +172,13 @@ public class loginActivity extends AppCompatActivity {
 
                             }
                         } else {
-
-                            Toast.makeText(loginActivity.this, getString(R.string.password_incorrect), Toast.LENGTH_SHORT).show();
+                            Toasty.error(loginActivity.this, getString(R.string.password_incorrect), Toast.LENGTH_SHORT, true).show();
                             loadingBar.dismiss();
 
                         }
                     }
                 } else {
-
-                    Toast.makeText(loginActivity.this, "Account with this " + phone + " number Do not Exists", Toast.LENGTH_SHORT).show();
+                    Toasty.error(loginActivity.this,  "Account with this " + phone + " number Do not Exists", Toast.LENGTH_SHORT, true).show();
                     loadingBar.dismiss();
 
                 }

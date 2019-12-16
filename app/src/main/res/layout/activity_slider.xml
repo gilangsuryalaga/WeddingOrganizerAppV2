@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
+    tools:context=".SliderActivity">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/slideViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="650dp">
+
+    </androidx.viewpager.widget.ViewPager>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <LinearLayout
+            android:id="@+id/dotslayout"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerInParent="true"
+            >
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/back"
+            android:textColor="#2c2d30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00FFFFFF"
+            android:padding="10dp"
+            android:textAllCaps="false"
+            android:text="Back"
+            android:textSize="25dp"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/next"
+            android:textColor="#2c2d30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="#00FFFFFF"
+            android:textAllCaps="false"
+            android:padding="10dp"
+            android:text="Next"
+            android:textSize="25dp" />
+    </RelativeLayout>
+</LinearLayout>

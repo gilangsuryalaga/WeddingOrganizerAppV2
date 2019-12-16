@@ -53,7 +53,7 @@ public class AdminNewOrdersActivity extends AppCompatActivity {
                     protected void onBindViewHolder(@NonNull AdminOrdersViewHolder holder, final int position, @NonNull final AdminOrders adminOrders) {
                         holder.userName.setText("Name: " + adminOrders.getName());
                         holder.userPhoneNumber.setText("Phone: " + adminOrders.getPhone());
-                        holder.userShippingAddress.setText("Address: "adminOrders.getAddress()+ "," + adminOrders.getCity() );
+                        holder.userShippingAddress.setText("Address: "+adminOrders.getAddress()+ "," + adminOrders.getCity() );
                         holder.userTotalPrice.setText("Total Price: Rp " + adminOrders.getTotalAmount());
                         holder.userDateTime.setText("Order at: " + adminOrders.getDate() + " "+ adminOrders.getTime());
 

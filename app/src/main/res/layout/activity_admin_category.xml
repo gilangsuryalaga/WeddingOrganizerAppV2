@@ -286,7 +286,7 @@
         android:textStyle="bold" />
     <Button
         android:id="@+id/check_orders"
-        android:background="@color/colorPrimaryDark"
+        android:background="@drawable/buttons"
         android:text="Check New Orders"
         android:layout_margin="10dp"
         android:textColor="@android:color/white"
@@ -300,7 +300,7 @@
 
     <Button
         android:id="@+id/maintain_btn"
-        android:background="@color/colorPrimaryDark"
+        android:background="@drawable/buttons"
         android:text="Edit Products"
         android:layout_marginBottom="5dp"
         android:layout_marginRight="10dp"

@@ -13,7 +13,7 @@
         android:layout_margin="25dp"
         android:text="Please Write Your Shipment Details"
         android:textAlignment="center"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="#E60000"
         android:textSize="20dp"
         android:textStyle="bold" />
 
@@ -64,7 +64,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_margin="20dp"
-        android:background="@color/colorPrimaryDark"
+        android:background="@drawable/buttons"
         android:text="Confirm"
         android:textColor="@android:color/white"
         android:textSize="20dp" />

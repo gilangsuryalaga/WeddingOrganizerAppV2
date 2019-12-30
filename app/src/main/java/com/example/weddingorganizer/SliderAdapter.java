@@ -20,21 +20,21 @@ public class SliderAdapter extends PagerAdapter {
     }
 
     public int[] slide_images = {
-            R.drawable.loveletter,
             R.drawable.weddingcouple,
-            R.drawable.weddingring
+            R.drawable.weddingring,
+            R.drawable.logo_3
 
     };
     public String[] slide_heading = {
-            "Test Heading 1",
-            "Test Heading 2",
-            "Test Heading 3"
+            " ",
+            " ",
+            " "
     };
 
     public String[] slide_desc = {
-            "Lorem ipsum dolor sit amet, consectur adipiscing elit, sed do eusmod tempor incididunt ut labore et dolore magna",
-            "Lorem ipsum dolor sit amet, consectur adipiscing elit, sed do eusmod tempor incididunt ut labore et dolore magna",
-            "Lorem ipsum dolor sit amet, consectur adipiscing elit, sed do eusmod tempor incididunt ut labore et dolore magna"
+            "Kami ada untuk mempermudah hari special anda",
+            "Kami Telah Bekerjasama Dengan WO Yang Sudah Terbukti dan Berpengalaman",
+            "Ayo Mulai Dengan Kami..."
     };
 
     @Override

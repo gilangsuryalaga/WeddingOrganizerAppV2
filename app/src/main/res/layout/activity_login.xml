@@ -19,7 +19,7 @@
             android:layout_height="110dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="120dp"
-            android:src="@drawable/logo_3"/>
+            android:src="@drawable/logo_bulat"/>
         <RelativeLayout
             android:id="@+id/rellay1"
             android:layout_below="@id/login_applogo"

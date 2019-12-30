@@ -2,7 +2,7 @@
 <resources>
     //#BF007A Default Color
     <color name="colorPrimary">#E60000</color>
-    <color name="colorPrimaryDark">#F87575</color>
+    <color name="colorPrimaryDark">#E60000</color>
     <color name="buttons">#E60000</color>
     <color name="inputDesign">#FC5D5D</color>
     <color name="colorAccent">#91EAE4</color>

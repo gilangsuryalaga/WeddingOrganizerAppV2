@@ -12,7 +12,7 @@
         android:id="@+id/logo_monster_splash"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:src="@drawable/logo_3"
+        android:src="@drawable/logo_bulat"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"

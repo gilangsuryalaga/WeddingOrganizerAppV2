@@ -35,7 +35,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.Menu;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.ViewFlipper;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
@@ -47,6 +49,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
     private DatabaseReference ProductsRef;
     private RecyclerView recyclerView;
+    ViewFlipper v_auto_slide;
     RecyclerView.LayoutManager layoutManager;
     private String type = "";
 
@@ -108,6 +111,15 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
+
+        //Auto Image Slide
+        int images[]={R.drawable.wedding1,R.drawable.wedding2,R.drawable.wedding3};
+        v_auto_slide = findViewById(R.id.v_auto_slide);
+
+        for(int i =0;i<images.length;i++){
+            flipperImages(images[i]);
+        }
+
 //        mAppBarConfiguration = new AppBarConfiguration.Builder(
 //                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow,
 //                R.id.nav_tools, R.id.nav_share, R.id.nav_send)
@@ -118,6 +130,20 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 //        NavigationUI.setupWithNavController(navigationView, navController);
 //
     }
+
+    //auto image slide
+    public void flipperImages(int images){
+        ImageView imgView = new ImageView(this);
+        imgView.setBackgroundResource(images);
+
+        v_auto_slide.addView(imgView);
+        v_auto_slide.setFlipInterval(4000);
+        v_auto_slide.setAutoStart(true);
+
+        v_auto_slide.setInAnimation(this,android.R.anim.slide_in_left);
+        v_auto_slide.setOutAnimation(this,android.R.anim.slide_out_right);
+    }
+
 
     @Override
     protected void onStart() {

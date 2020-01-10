@@ -22,7 +22,7 @@ public class SliderAdapter extends PagerAdapter {
     public int[] slide_images = {
             R.drawable.weddingcouple,
             R.drawable.weddingring,
-            R.drawable.logo_3
+            R.drawable.logo_bulat
 
     };
     public String[] slide_heading = {

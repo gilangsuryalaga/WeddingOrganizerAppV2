@@ -26,6 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Product Name"
+            android:layout_below="@id/product_image"
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
             android:textSize="20dp"
@@ -36,8 +37,7 @@
             android:layout_width="match_parent"
             android:layout_margin="10dp"
             android:background="@drawable/bordersubitem"
-            android:layout_height="200dp"
-            android:layout_below="@id/product_name"
+            android:layout_height="155dp"
             android:layout_marginTop="2dp"
             android:scaleType="centerCrop" />
 
@@ -46,10 +46,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Product Price"
-            android:layout_margin="5dp"
+            android:layout_margin="10dp"
             android:padding="5dp"
             android:textAlignment="center"
-            android:layout_below="@id/product_image"
+            android:layout_below="@id/product_name"
             android:textColor="#FB8C00"
             android:textSize="18dp"/>
 

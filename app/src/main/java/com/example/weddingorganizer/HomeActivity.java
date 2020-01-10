@@ -131,7 +131,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 //
     }
 
-    //auto image slide
+    //auto image slide7
     public void flipperImages(int images){
         ImageView imgView = new ImageView(this);
         imgView.setBackgroundResource(images);

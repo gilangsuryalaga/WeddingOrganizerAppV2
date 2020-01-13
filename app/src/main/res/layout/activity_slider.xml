@@ -5,13 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#fff"
+    android:background="@drawable/gradient_main"
     tools:context=".SliderActivity">
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/slideViewPager"
         android:layout_width="match_parent"
-        android:layout_height="585dp"
+        android:layout_height="match_parent"
+        android:layout_above="@id/laybutt"
         >
 
     </androidx.viewpager.widget.ViewPager>
@@ -20,8 +21,9 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/laybutt"
         android:orientation="horizontal"
-        android:background="@drawable/gradient_main"
+        android:background="#00FFFFFF"
         android:layout_alignParentBottom="true"
         >
         <LinearLayout

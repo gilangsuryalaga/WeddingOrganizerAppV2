@@ -9,7 +9,7 @@
     android:background="@drawable/borderitem"
     android:orientation="vertical"
     android:padding="10dp"
-    app:cardCornerRadius="10dp"
+    app:cardCornerRadius="15dp"
     app:cardElevation="15dp">
 
     <RelativeLayout
@@ -29,7 +29,7 @@
             android:textAlignment="center"
             android:textAllCaps="true"
             android:textColor="@color/colorPrimary"
-            android:textSize="10dp"
+            android:textSize="15dp"
             android:textStyle="bold" />
 
         <ImageView
@@ -42,6 +42,7 @@
             android:scaleType="centerCrop" />
 
         <TextView
+            android:visibility="gone"
             android:id="@+id/product_price"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -56,6 +57,7 @@
             android:textStyle="bold" />
 
         <TextView
+            android:visibility="gone"
             android:id="@+id/product_description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

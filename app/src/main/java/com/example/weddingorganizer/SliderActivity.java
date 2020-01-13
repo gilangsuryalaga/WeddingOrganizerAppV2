@@ -113,7 +113,7 @@ public class SliderActivity extends AppCompatActivity {
             mNextBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent i = new Intent(SliderActivity.this, MainActivity.class);
+                    Intent i = new Intent(SliderActivity.this, SplashScreenActivity.class);
                     startActivity(i);
                 }
             });

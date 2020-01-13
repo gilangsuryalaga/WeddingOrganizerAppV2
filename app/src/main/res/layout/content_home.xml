@@ -7,52 +7,54 @@
     android:background="@drawable/gradient_main"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/app_bar_home">
-<androidx.cardview.widget.CardView
-    android:id="@+id/nav_auto_1"
-    android:layout_width="match_parent"
-    app:cardBackgroundColor="@color/grad1"
-    android:layout_margin="10dp"
-    app:cardCornerRadius="10dp"
-    android:padding="10dp"
-    android:layout_height="160dp">
-    <ViewFlipper
-        android:id="@+id/v_auto_slide"
-        android:layout_width="match_parent"
-        android:elevation="10dp"
-        android:layout_margin="5dp"
-        android:fadingEdge="horizontal"
-        android:animateLayoutChanges="true"
-        android:layout_height="160dp"/>
-</androidx.cardview.widget.CardView>
-    <androidx.cardview.widget.CardView
-        android:id="@+id/nav_card"
-        android:layout_width="325dp"
-        android:layout_height="100dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/nav_auto_1"
-        android:layout_margin="10dp"
-        android:elevation="@dimen/cardview_default_radius"
-        app:cardBackgroundColor="@color/grad2"
-        app:cardCornerRadius="10dp"></androidx.cardview.widget.CardView>
 
-    <TextView
-        android:id="@+id/listTxt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/nav_card"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp"
-        android:text="Most Popular"
-        android:textColor="@color/colorPrimary"
-        android:textSize="20dp"
-        android:textStyle="bold"></TextView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/nav_auto_1"
+            android:layout_width="350dp"
+            android:layout_height="170dp"
+            android:padding="10dp"
+            android:layout_margin="5dp"
+            app:cardBackgroundColor="@color/grad1"
+            app:cardCornerRadius="10dp">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_menu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/listTxt"
-        android:orientation="horizontal"
-        android:scrollbars="horizontal"></androidx.recyclerview.widget.RecyclerView>
+            <ViewFlipper
+                android:id="@+id/v_auto_slide"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:animateLayoutChanges="true"
+                android:elevation="10dp"
+                android:fadingEdge="horizontal" />
+        </androidx.cardview.widget.CardView>
 
+        <androidx.cardview.widget.CardView
+            android:id="@+id/nav_card"
+            android:layout_width="325dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/nav_auto_1"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="5dp"
+            android:elevation="@dimen/cardview_default_radius"
+            app:cardBackgroundColor="@color/grad2"
+            app:cardCornerRadius="10dp"></androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/listTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nav_card"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:text="Most Popular"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20dp"
+            android:textStyle="bold"></TextView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/listTxt"
+            android:orientation="horizontal"
+            android:scrollbars="horizontal"></androidx.recyclerview.widget.RecyclerView>
 </RelativeLayout>

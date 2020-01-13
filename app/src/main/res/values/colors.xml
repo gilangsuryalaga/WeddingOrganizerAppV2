@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     //#BF007A Default Color
-    <color name="colorPrimary">#F87575</color>
-    <color name="colorPrimaryDark">#E60000</color>
-    <color name="buttons">#E60000</color>
-    <color name="inputDesign">#FC5D5D</color>
+    <color name="colorPrimary">#b0f3f1</color>
+    <color name="colorPrimaryDark">#0f2027</color>
+    <color name="buttons">#b0f3f1</color>
+    <color name="inputDesign">#2c5364</color>
     <color name="colorAccent">#91EAE4</color>
     <color name="colorTransparentWhite">#cccccc</color>
     <color name="white">#ffff</color>
+    <color name="grad1">#203a43</color>
+    <color name="grad2">#2c5364</color>
+    <color name="grad3">#0f2027</color>
 </resources>

@@ -4,22 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff"
+    android:background="@drawable/gradient_main"
     tools:context=".loginActivity">
 
     <RelativeLayout
         android:animateLayoutChanges="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         >
         <ImageView
             android:id="@+id/login_applogo"
-            android:layout_width="300dp"
-            android:layout_height="110dp"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="120dp"
-            android:src="@drawable/logo_bulat"/>
+            android:layout_marginTop="100dp"
+            android:src="@drawable/logodark"
+            />
         <RelativeLayout
             android:id="@+id/rellay1"
             android:layout_below="@id/login_applogo"
@@ -38,8 +38,8 @@
                 android:hint="@string/phone_number"
                 android:inputType="number"
                 android:padding="20dp"
-                android:textColor="#E60000"
-                android:textColorHint="#E60000"
+                android:textColor="@color/grad3"
+                android:textColorHint="@color/grad1"
                 android:textSize="17sp"
                 android:textStyle="bold" />
 
@@ -55,8 +55,8 @@
                 android:hint="@string/password"
                 android:inputType="textPassword"
                 android:padding="20dp"
-                android:textColor="#E60000"
-                android:textColorHint="#E60000"
+                android:textColor="@color/grad3"
+                android:textColorHint="@color/grad1"
                 android:textSize="17sp"
                 android:textStyle="bold" />
 
@@ -76,7 +76,7 @@
                     android:layout_marginLeft="17dp"
                     android:gravity="center_vertical"
                     android:text="@string/remember_me"
-                    android:textColor="#FF0000"
+                    android:textColor="@color/colorPrimary"
                     android:textColorHint="@color/colorPrimaryDark"
                     android:textSize="16sp"
                     android:textStyle="bold"
@@ -88,26 +88,28 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="100dp"
                     android:text="@string/forget_password"
-                    android:textColor="#FF0000"
-                    android:textSize="16sp"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15sp"
+                    android:layout_marginBottom="5dp"
                     android:textStyle="bold" />
             </LinearLayout>
 
             <Button
                 android:id="@+id/login_btn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
                 android:layout_below="@id/linear_layout_1"
                 android:layout_marginLeft="15dp"
-                android:layout_marginTop="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20dp"
                 android:layout_marginRight="15dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/buttons"
-                android:padding="17dp"
+                android:padding="5dp"
                 android:text="@string/login"
                 android:textAllCaps="false"
-                android:textColor="@android:color/white"
-                android:textSize="18sp" />
+                android:textColor="@color/grad3"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/admin_panel_link"
@@ -118,7 +120,7 @@
                 android:layout_marginLeft="100dp"
                 android:layout_marginEnd="23dp"
                 android:text="@string/login_as_admin"
-                android:textColor="#fff"
+                android:textColor="#00FFFFFF"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 

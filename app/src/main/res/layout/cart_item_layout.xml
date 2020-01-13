@@ -9,7 +9,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#E60000"
+        android:background="@color/white"
         android:padding="10dp">
 
         <TextView
@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:text="Product Name"
-            android:textColor="@android:color/white"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="14dp"
             android:textStyle="bold" />
 
@@ -31,7 +31,7 @@
             android:layout_marginRight="5dp"
             android:text="Product Quantitiy"
             android:textAlignment="viewEnd"
-            android:textColor="@android:color/white"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="14dp"
             android:textStyle="bold" />
 
@@ -43,7 +43,7 @@
             android:layout_marginTop="10dp"
             android:gravity="center"
             android:text="Product Price"
-            android:textColor="@android:color/white"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="14dp"
             android:textStyle="bold" />
 

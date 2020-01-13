@@ -4,26 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff"
+    android:background="@drawable/gradient_main"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/app_bar_home">
 
+        <ViewFlipper
+            android:id="@+id/v_auto_slide"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="5dp"/>
 
-    <ViewFlipper
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:id="@+id/v_auto_slide"
-        />
-
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_menu"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scrollbars="vertical"
-        android:layout_below="@id/v_auto_slide"
-        >
-
-    </androidx.recyclerview.widget.RecyclerView>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/v_auto_slide"
+            android:scrollbars="horizontal">
+        </androidx.recyclerview.widget.RecyclerView>
 
 </RelativeLayout>

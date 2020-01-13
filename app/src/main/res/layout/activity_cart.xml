@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_alignParentTop="true"
-        android:background="@color/white">
+        android:background="@color/grad3">
 
         <TextView
             android:id="@+id/total_price"
@@ -21,7 +21,7 @@
             android:layout_marginTop="10dp"
             android:text="Total Price"
             android:textAlignment="center"
-            android:textColor="@color/grad3"
+            android:textColor="@color/colorPrimary"
             android:textSize="20dp" />
     </RelativeLayout>
     <TextView

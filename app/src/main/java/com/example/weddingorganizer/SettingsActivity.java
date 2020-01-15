@@ -111,7 +111,7 @@ public class SettingsActivity extends AppCompatActivity {
         HashMap<String, Object> userMap = new HashMap<>();
         userMap.put("name", fullNameEditText.getText().toString());
         userMap.put("address", addressEditText.getText().toString());
-        userMap.put("phone", userPhoneEditText.getText().toString());
+        userMap.put("phone", Prevalent.currentonlineUser.getPhone());
         ref.child(Prevalent.currentonlineUser.getPhone()).updateChildren(userMap);
 
         startActivity(new Intent(SettingsActivity.this, HomeActivity.class));
@@ -144,8 +144,6 @@ public class SettingsActivity extends AppCompatActivity {
             Toasty.warning(this, "Name is Empty", Toast.LENGTH_SHORT, true).show();
         } else if (TextUtils.isEmpty(addressEditText.getText().toString())) {
             Toasty.warning(this, "Address is Empty", Toast.LENGTH_SHORT, true).show();
-        } else if (TextUtils.isEmpty(userPhoneEditText.getText().toString())) {
-            Toasty.warning(this, "Phone Number is Empty", Toast.LENGTH_SHORT, true).show();
         } else if (checker.equals("clicked")) {
             uploadImage();
         }

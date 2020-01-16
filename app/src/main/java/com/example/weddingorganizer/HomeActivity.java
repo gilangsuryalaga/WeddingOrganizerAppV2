@@ -12,6 +12,7 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -32,6 +33,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.view.Menu;
 import android.view.ViewGroup;
@@ -52,6 +54,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     ViewFlipper v_auto_slide;
     RecyclerView.LayoutManager layoutManager;
     private String type = "";
+    private SwipeRefreshLayout refreshLayout;
 
     //    private AppBarConfiguration mAppBarConfiguration;
 //
@@ -112,6 +115,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false);
         recyclerView.setLayoutManager(layoutManager);
 
+
         //Auto Image Slide
         int images[]={R.drawable.wedding1,R.drawable.wedding2,R.drawable.wedding3};
         v_auto_slide = findViewById(R.id.v_auto_slide);
@@ -129,6 +133,21 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 //        NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
 //        NavigationUI.setupWithNavController(navigationView, navController);
 //
+
+        refreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipeRefresh);
+        refreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+
+
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        refreshLayout.setRefreshing(false);
+                    }
+                }, 400);
+            }
+        });
     }
 
     //auto image slide7
@@ -314,4 +333,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
 }

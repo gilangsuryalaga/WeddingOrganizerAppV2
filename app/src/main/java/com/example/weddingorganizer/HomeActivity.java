@@ -118,7 +118,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
 
         //Auto Image Slide
-        int images[]={R.drawable.wedding1,R.drawable.wedding2,R.drawable.wedding3};
+        int images[]={R.drawable.valentine,R.drawable.sale,R.drawable.go_pay};
         v_auto_slide = findViewById(R.id.v_auto_slide);
 
         for(int i =0;i<images.length;i++){

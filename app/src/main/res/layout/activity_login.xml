@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_main"
+    android:background="@drawable/bleh"
     tools:context=".loginActivity">
 
     <RelativeLayout
@@ -76,7 +76,7 @@
                     android:layout_marginLeft="17dp"
                     android:gravity="center_vertical"
                     android:text="@string/remember_me"
-                    android:textColor="@color/colorPrimary"
+                    android:textColor="@color/colorAccent"
                     android:textColorHint="@color/colorPrimaryDark"
                     android:textSize="16sp"
                     android:textStyle="bold"
@@ -88,7 +88,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="100dp"
                     android:text="@string/forget_password"
-                    android:textColor="@color/colorPrimary"
+                    android:textColor="@color/colorAccent"
                     android:textSize="15sp"
                     android:layout_marginBottom="5dp"
                     android:textStyle="bold" />

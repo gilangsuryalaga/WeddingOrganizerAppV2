@@ -4,23 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_main"
+    android:background="@drawable/bg"
     tools:context=".RegisterActivity">
 
     <ImageView
         android:id="@+id/register_applogo"
         android:layout_width="wrap_content"
         android:layout_height="150dp"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="105dp"
-        android:src="@drawable/logodark"
-        />
+        android:src="@drawable/logodark" />
 
     <EditText
         android:id="@+id/user_name_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="80dp"
         android:layout_below="@id/register_applogo"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
@@ -82,6 +80,6 @@
         android:padding="5dp"
         android:text="@string/create_a_account"
         android:textAllCaps="false"
-        android:textColor="@color/grad3"
+        android:textColor="@color/white"
         android:textSize="15sp" />
 </RelativeLayout>

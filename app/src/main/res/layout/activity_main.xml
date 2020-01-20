@@ -24,7 +24,7 @@
         android:fontFamily="@font/kavivanar"
         android:text="@string/app_slogan"
         android:textAlignment="center"
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold|italic" />
     <Button
@@ -42,7 +42,7 @@
         android:textStyle="bold"
         android:textSize="18sp"
         android:text="@string/already_have_an_account_login"
-        android:textColor="@color/grad3"/>
+        android:textColor="@color/white"/>
     <Button
         android:id="@+id/main_join_now_btn"
         android:layout_width="match_parent"
@@ -57,6 +57,6 @@
         android:textSize="18sp"
         android:text="@string/join_now"
         android:textStyle="bold"
-        android:textColor="@color/grad3"/>
+        android:textColor="@color/white"/>
 
 </RelativeLayout>

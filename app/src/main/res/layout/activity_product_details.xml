@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:padding="10dp"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_main"
+    android:background="#ffff"
     tools:context=".ProductDetailsActivity">
 
     <ImageView
@@ -25,7 +25,7 @@
         android:layout_marginTop="10dp"
         android:gravity="center"
         android:text="Product Name"
-        android:textColor="@android:color/white"
+        android:textColor="@color/grad3"
         android:textSize="30sp"
         android:textStyle="bold" />
 
@@ -37,7 +37,7 @@
         android:layout_marginTop="10dp"
         android:gravity="center"
         android:text="Product Description"
-        android:textColor="@android:color/white"
+        android:textColor="@color/grad3"
         android:textSize="16sp"
         android:textStyle="bold" />
 
@@ -60,7 +60,7 @@
         android:layout_below="@id/product_price_details"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        app:textColor="@color/grad3"
+        app:textColor="@color/colorAccent"
         android:elevation="6dp"
         app:finalNumber="10"
         app:initialNumber="1"
@@ -74,9 +74,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_margin="15dp"
-        android:background="@drawable/border"
+        android:background="@drawable/buttons"
         android:text="Add to Cart"
-        android:textColor="@color/grad3"
+        android:textColor="@color/white"
         android:textSize="18dp" />
 
 </RelativeLayout>

@@ -63,7 +63,7 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="10dp"
                 android:text="Most Popular"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/grad3"
                 android:textSize="20dp"
                 android:textStyle="bold"></TextView>
 
@@ -72,8 +72,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_below="@id/listTxt"
-                android:orientation="horizontal"
-                android:scrollbars="horizontal"></androidx.recyclerview.widget.RecyclerView>
+                android:orientation="horizontal"></androidx.recyclerview.widget.RecyclerView>
 
         </RelativeLayout>
     </ScrollView>

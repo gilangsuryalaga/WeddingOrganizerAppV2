@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_main"
+    android:background="#ffff"
     tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/app_logo"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="300dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
-        android:src="@drawable/logdrk"/>
+        android:src="@drawable/wedingo"/>
 
     <TextView
         android:id="@+id/app_slogan"
@@ -24,7 +24,7 @@
         android:fontFamily="@font/kavivanar"
         android:text="@string/app_slogan"
         android:textAlignment="center"
-        android:textColor="@color/white"
+        android:textColor="@color/grad3"
         android:textSize="18sp"
         android:textStyle="bold|italic" />
     <Button
@@ -36,13 +36,13 @@
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        android:background="@drawable/buttons"
+        android:background="#00FFFFFF"
         android:padding="20dp"
         android:textAllCaps="false"
-        android:textStyle="bold"
+        android:textStyle="italic"
         android:textSize="18sp"
         android:text="@string/already_have_an_account_login"
-        android:textColor="@color/white"/>
+        android:textColor="@color/grad3"/>
     <Button
         android:id="@+id/main_join_now_btn"
         android:layout_width="match_parent"

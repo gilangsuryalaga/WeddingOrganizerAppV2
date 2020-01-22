@@ -5,15 +5,15 @@
     android:layout_height="250dp"
     android:layout_marginLeft="5dp"
     android:layout_marginTop="20dp"
-    android:background="@drawable/borderitem"
+    android:background="#FFF"
     android:orientation="vertical"
     app:cardCornerRadius="15dp"
-    app:cardElevation="15dp">
+    app:cardElevation="35dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/borderitem"
+        android:background="#fff"
         android:padding="5dp">
 
         <TextView
@@ -24,9 +24,8 @@
             android:layout_centerHorizontal="true"
             android:padding="5dp"
             android:text="Product Name"
-            android:textAlignment="center"
             android:textAllCaps="true"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/grad3"
             android:textSize="15dp"
             android:textStyle="bold" />
 

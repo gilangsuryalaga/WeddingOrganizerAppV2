@@ -7,76 +7,85 @@
     android:background="#FAFAFA"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/app_bar_home">
+    <RelativeLayout
+        android:id="@+id/contain_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/swipeRefresh">
+        <SearchView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></SearchView>
+    </RelativeLayout>
 
-    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/swipeRefresh"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <RelativeLayout
-            android:layout_width="wrap_content"
+        <ScrollView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/nav_auto_1"
-                android:layout_width="match_parent"
-                android:layout_height="170dp"
-                android:layout_margin="5dp"
-                android:padding="10dp"
-                app:cardBackgroundColor="@color/grad1"
-                app:cardCornerRadius="10dp">
-
-                <ViewFlipper
-                    android:id="@+id/v_auto_slide"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:animateLayoutChanges="true"
-                    android:elevation="10dp"
-                    android:fadingEdge="horizontal" />
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/nav_card"
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_below="@id/nav_auto_1"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:visibility="gone"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:elevation="@dimen/cardview_default_radius"
-                app:cardBackgroundColor="@color/grad2"
-                app:cardCornerRadius="10dp"></androidx.cardview.widget.CardView>
-
-            <TextView
-                android:id="@+id/listTxt"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/nav_card"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="10dp"
-                android:text="Most Popular"
-                android:textColor="@color/grad3"
-                android:textSize="20dp"
-                android:textStyle="bold"></TextView>
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler_menu"
+            <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_below="@id/listTxt"
-                android:orientation="horizontal"></androidx.recyclerview.widget.RecyclerView>
+                android:paddingBottom="10dp">
 
-        </RelativeLayout>
-    </ScrollView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/nav_auto_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:layout_margin="5dp"
+                    android:padding="10dp"
+                    app:cardBackgroundColor="@color/grad1"
+                    app:cardCornerRadius="10dp">
+
+                    <ViewFlipper
+                        android:id="@+id/v_auto_slide"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:animateLayoutChanges="true"
+                        android:elevation="10dp"
+                        android:fadingEdge="horizontal" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/nav_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_below="@id/nav_auto_1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:elevation="@dimen/cardview_default_radius"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="@color/grad2"
+                    app:cardCornerRadius="10dp"></androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/listTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/nav_card"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Most Popular"
+                    android:textColor="@color/grad3"
+                    android:textSize="20dp"
+                    android:textStyle="bold"></TextView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/listTxt"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal"></androidx.recyclerview.widget.RecyclerView>
+
+            </RelativeLayout>
+        </ScrollView>
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 </RelativeLayout>

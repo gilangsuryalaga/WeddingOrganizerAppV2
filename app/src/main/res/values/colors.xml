@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     //#BF007A Default Color
-    <color name="colorPrimary">#b0f3f1</color>
-    <color name="colorPrimaryDark">#0f2027</color>
+    <color name="colorPrimary">#7C73E6</color>
+    <color name="colorPrimaryDark">#6059AF</color>
     <color name="buttons">#b0f3f1</color>
     <color name="inputDesign">#2c5364</color>
     <color name="colorAccent">#7C73E6</color>

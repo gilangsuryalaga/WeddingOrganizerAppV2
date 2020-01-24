@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_main"
+    android:background="#fafafa"
     tools:context=".CartActivity">
 
     <RelativeLayout
@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_alignParentTop="true"
-        android:background="@color/grad3">
+        android:background="@color/colorPrimaryDark">
 
         <TextView
             android:id="@+id/total_price"
@@ -21,21 +21,22 @@
             android:layout_marginTop="10dp"
             android:text="Total Price"
             android:textAlignment="center"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/white"
             android:textSize="20dp" />
     </RelativeLayout>
     <TextView
         android:id="@+id/msg1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorPrimary"
+        android:textColor="#A53F3F"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:textAlignment="center"
         android:textSize="20dp"
         android:layout_centerVertical="true"
         android:text="The Orders has been sent to Admin for next Confirmation "
-        android:visibility="gone"/>
+        android:visibility="gone"
+        />
 
 
     <androidx.recyclerview.widget.RecyclerView

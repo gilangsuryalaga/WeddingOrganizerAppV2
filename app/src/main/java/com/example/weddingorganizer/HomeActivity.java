@@ -4,6 +4,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.weddingorganizer.Adapter.CategoryAdapter;
 import com.example.weddingorganizer.Admin.AdminMaintainProductsActivity;
 import com.example.weddingorganizer.Model.Category;
 import com.example.weddingorganizer.Model.Products;
@@ -46,6 +47,7 @@ import android.widget.ViewFlipper;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.ArrayList;
+import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 import io.paperdb.Paper;
@@ -55,12 +57,15 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     private DatabaseReference ProductsRef;
     private RecyclerView recyclerView, recyclercategory;
     ViewFlipper v_auto_slide;
+    private List<Category> weddingCategory;
+    private CategoryAdapter categoryAdapter;
     RecyclerView.LayoutManager layoutManager, layoutManager2;
     private String type = "";
     private SwipeRefreshLayout refreshLayout;
 
     //    private AppBarConfiguration mAppBarConfiguration;
 //
+    String[] nama_promo={"12.12 Discount","Promo 02.02","Promo 212","Promo 03.03","Promo 06.06","Promo 16.16","Meried Day"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -115,12 +120,21 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         //Recycler Category
         recyclercategory = findViewById(R.id.recycler_category);
-        recyclercategory.setHasFixedSize(true);
+        recyclercategory.  setHasFixedSize(true);
         layoutManager2 = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
 
+        weddingCategory = new ArrayList<>();
+
+        for (int i = 0; i < nama_promo.length;i++){
+            Category category = new Category(nama_promo[i]);
+
+            weddingCategory.add(category);
+        }
+        categoryAdapter = new CategoryAdapter(weddingCategory);
 
         recyclerView = findViewById(R.id.recycler_menu);
         recyclercategory.setLayoutManager(layoutManager2);
+        recyclercategory.setAdapter( categoryAdapter );
       //  recyclerView.setHasFixedSize(true);
         layoutManager = new GridLayoutManager(this,2);
         recyclerView.setLayoutManager(layoutManager);

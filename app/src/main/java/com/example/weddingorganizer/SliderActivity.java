@@ -11,6 +11,8 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import com.example.weddingorganizer.Adapter.SliderAdapter;
+
 public class SliderActivity extends AppCompatActivity {
     private ViewPager mSlideViewPager;
     private LinearLayout mLinearLayout;

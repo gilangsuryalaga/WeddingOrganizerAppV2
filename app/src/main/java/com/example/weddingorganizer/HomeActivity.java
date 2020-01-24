@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.weddingorganizer.Admin.AdminMaintainProductsActivity;
+import com.example.weddingorganizer.Model.Category;
 import com.example.weddingorganizer.Model.Products;
 import com.example.weddingorganizer.Prevalent.Prevalent;
 import com.example.weddingorganizer.ViewHolder.ProductViewHolder;
@@ -44,6 +45,7 @@ import android.widget.ViewFlipper;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
+import java.util.ArrayList;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 import io.paperdb.Paper;
@@ -51,9 +53,9 @@ import io.paperdb.Paper;
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DatabaseReference ProductsRef;
-    private RecyclerView recyclerView;
+    private RecyclerView recyclerView, recyclercategory;
     ViewFlipper v_auto_slide;
-    RecyclerView.LayoutManager layoutManager;
+    RecyclerView.LayoutManager layoutManager, layoutManager2;
     private String type = "";
     private SwipeRefreshLayout refreshLayout;
 
@@ -111,7 +113,14 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             userNameTextView.setText("Admin");
         }
 
+        //Recycler Category
+        recyclercategory = findViewById(R.id.recycler_category);
+        recyclercategory.setHasFixedSize(true);
+        layoutManager2 = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
+
+
         recyclerView = findViewById(R.id.recycler_menu);
+        recyclercategory.setLayoutManager(layoutManager2);
       //  recyclerView.setHasFixedSize(true);
         layoutManager = new GridLayoutManager(this,2);
         recyclerView.setLayoutManager(layoutManager);

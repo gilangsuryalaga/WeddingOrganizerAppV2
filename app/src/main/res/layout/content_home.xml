@@ -7,20 +7,32 @@
     android:background="#FAFAFA"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/app_bar_home">
+
     <RelativeLayout
         android:id="@+id/contain_1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/swipeRefresh">
-        <SearchView
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"></SearchView>
+            android:layout_height="60dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            app:cardCornerRadius="5dp">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="horizontal"/>
+        </androidx.cardview.widget.CardView>
     </RelativeLayout>
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/swipeRefresh"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_below="@id/contain_1">
+
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content">

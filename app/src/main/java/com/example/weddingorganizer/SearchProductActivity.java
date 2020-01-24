@@ -2,6 +2,7 @@ package com.example.weddingorganizer;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -40,7 +41,7 @@ public class SearchProductActivity extends AppCompatActivity {
         searchBtn = findViewById(R.id.search_btn);
 
         searchList = findViewById(R.id.search_list);
-        searchList.setLayoutManager(new LinearLayoutManager(SearchProductActivity.this));
+        searchList.setLayoutManager(new GridLayoutManager(SearchProductActivity.this,2));
 
         searchBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,7 +71,7 @@ public class SearchProductActivity extends AppCompatActivity {
                         NumberFormat formatter = new DecimalFormat("#,###");
                         holder.txtProductName.setText(products.getname());
                         String price = formatter.format(Integer.valueOf(products.getPrice()));
-                        holder.txtProductPrice.setText("Price = " + "Rp " + price);
+                        holder.txtProductPrice.setText("Rp. " + price);
                         holder.txtProductDescription.setText(products.getDescription());
                         Picasso.get().load(products.getImage()).into(holder.imageView);
 

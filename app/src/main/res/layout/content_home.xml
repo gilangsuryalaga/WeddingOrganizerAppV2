@@ -23,6 +23,7 @@
                 android:id="@+id/recycler_category"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:scrollIndicators="none"
                 android:scrollbars="horizontal"/>
         </androidx.cardview.widget.CardView>
     </RelativeLayout>

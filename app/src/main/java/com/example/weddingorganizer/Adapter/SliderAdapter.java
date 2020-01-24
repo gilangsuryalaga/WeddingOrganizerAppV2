@@ -1,4 +1,4 @@
-package com.example.weddingorganizer;
+package com.example.weddingorganizer.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
+
+import com.example.weddingorganizer.R;
 
 public class SliderAdapter extends PagerAdapter {
     Context context;

@@ -83,10 +83,10 @@ public class ExportPDFActivity extends AppCompatActivity {
                 if (dataSnapshot.exists()) {
                     AdminOrders order = dataSnapshot.getValue(AdminOrders.class);
                     order_name.setText(order.getName());
-                    order_address.setText(order.getAddress() + "," + order.getCity());
-                    order_date.setText(order.getDate());
-                    order_phone.setText(order.getPhone());
-                    order_total.setText(order.getTotalAmount());
+                    order_address.setText(order.getAddress() + " ," + order.getCity());
+                    order_date.setText(""+order.getDate());
+                    order_phone.setText(""+order.getPhone());
+                    order_total.setText("Total : "+order.getTotalAmount());
                 }
             }
 

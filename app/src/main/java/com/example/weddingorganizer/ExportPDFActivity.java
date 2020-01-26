@@ -119,6 +119,10 @@ public class ExportPDFActivity extends AppCompatActivity {
         Paint paint = new Paint();
         canvas.drawPaint(paint);
 
+        bitmap = Bitmap.createScaledBitmap(bitmap, convertWidth, convertHighet, true);
+
+        paint.setColor(Color.BLUE);
+        canvas.drawBitmap(bitmap, 0, 0 , null);
         document.finishPage(page);
 
         // write the document content

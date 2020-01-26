@@ -34,6 +34,7 @@ public class ExportPDFActivity extends AppCompatActivity {
 
 
         userId = getIntent().getStringExtra("uid");
+        getOrderDetail(userId);
 
     }
 

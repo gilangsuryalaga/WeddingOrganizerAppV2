@@ -23,7 +23,9 @@
                 android:id="@+id/recycler_category"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:scrollbars="horizontal"/>
+                android:scrollbars="none"
+
+                />
         </androidx.cardview.widget.CardView>
     </RelativeLayout>
 
@@ -35,7 +37,9 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            >
 
             <RelativeLayout
                 android:layout_width="wrap_content"
@@ -74,7 +78,9 @@
                     android:elevation="@dimen/cardview_default_radius"
                     android:visibility="gone"
                     app:cardBackgroundColor="@color/grad2"
-                    app:cardCornerRadius="10dp"></androidx.cardview.widget.CardView>
+                    app:cardCornerRadius="10dp">
+
+                </androidx.cardview.widget.CardView>
 
                 <TextView
                     android:id="@+id/listTxt"
@@ -86,7 +92,9 @@
                     android:text="Most Popular"
                     android:textColor="@color/grad3"
                     android:textSize="20dp"
-                    android:textStyle="bold"></TextView>
+                    android:textStyle="bold">
+
+                </TextView>
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recycler_menu"
@@ -94,7 +102,9 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/listTxt"
                     android:layout_centerHorizontal="true"
-                    android:orientation="horizontal"></androidx.recyclerview.widget.RecyclerView>
+                    android:orientation="horizontal">
+
+                </androidx.recyclerview.widget.RecyclerView>
 
             </RelativeLayout>
         </ScrollView>

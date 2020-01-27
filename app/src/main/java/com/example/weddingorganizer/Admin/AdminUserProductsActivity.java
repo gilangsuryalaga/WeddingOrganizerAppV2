@@ -27,7 +27,6 @@ public class AdminUserProductsActivity extends AppCompatActivity {
     private RecyclerView productList;
     RecyclerView.LayoutManager layoutManager;
     private DatabaseReference cartListRef;
-
     private String userId = "";
 
     @Override
@@ -62,9 +61,7 @@ public class AdminUserProductsActivity extends AppCompatActivity {
                 String price = formatter.format(Integer.valueOf(model.getPrice()));
                 holder.txtProductPrice.setText("Rp " + price);
                 holder.txtProductName.setText(model.getName());
-
             }
-
             @NonNull
             @Override
             public CartViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

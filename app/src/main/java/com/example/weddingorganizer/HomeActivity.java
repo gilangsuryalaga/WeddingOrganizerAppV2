@@ -59,13 +59,14 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     ViewFlipper v_auto_slide;
     private List<Category> weddingCategory;
     private CategoryAdapter categoryAdapter;
+
     RecyclerView.LayoutManager layoutManager, layoutManager2;
     private String type = "";
     private SwipeRefreshLayout refreshLayout;
 
     //    private AppBarConfiguration mAppBarConfiguration;
 //
-    String[] nama_promo={"12.12 Discount","Promo 02.02","Promo 212","Promo 03.03","Promo 06.06","Promo 16.16","Meried Day"};
+    String[] nama_promo={"12.12 Discount","Promo 02.02","Promo 212","Promo 03.03","Promo 06.06","Promo 16.16","Married Day"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -277,6 +278,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         getMenuInflater().inflate(R.menu.home, menu);
         return true;
     }
+
+
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {

@@ -60,7 +60,7 @@
         android:layout_below="@id/product_price_details"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        app:textColor="@color/colorAccent"
+        app:textColor="@color/white"
         android:elevation="6dp"
         app:finalNumber="10"
         app:initialNumber="1"

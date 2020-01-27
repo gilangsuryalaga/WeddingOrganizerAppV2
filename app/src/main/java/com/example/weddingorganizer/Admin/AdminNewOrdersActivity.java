@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.weddingorganizer.ExportPDFActivity;
 import com.example.weddingorganizer.Model.AdminOrders;
 import com.example.weddingorganizer.R;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -74,7 +75,8 @@ public class AdminNewOrdersActivity extends AppCompatActivity {
                             public void onClick(View view) {
                                 CharSequence options[] = new CharSequence[]{
                                         "Yes",
-                                        "No"
+                                        "No",
+                                        "Print"
                                 };
                                 final AlertDialog.Builder builder = new AlertDialog.Builder(AdminNewOrdersActivity.this);
                                 builder.setTitle("Have You shipped this order products ? ");
@@ -84,10 +86,15 @@ public class AdminNewOrdersActivity extends AppCompatActivity {
                                     public void onClick(DialogInterface dialogInterface, int i) {
                                         if(i == 0){
                                             String uID = getRef(position).getKey();
-
                                             RemoveOrder(uID);
-                                        }else{
+                                        }else if(i == 1){
                                             finish();
+                                        }else{
+                                            String uID = getRef(position).getKey();
+
+                                            Intent intent = new Intent(AdminNewOrdersActivity.this, ExportPDFActivity.class);
+                                            intent.putExtra("uid",uID);
+                                            startActivity(intent);
                                         }
                                     }
                                 });

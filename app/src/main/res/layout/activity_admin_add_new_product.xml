@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Admin.AdminAddNewProductActivity"
-    android:background="@drawable/gradient_main">
+    android:background="#fafafa">
 
     <ImageView
         android:id="@+id/select_product_image"
@@ -72,6 +72,6 @@
         android:layout_marginTop="20dp"
         android:textSize="18sp"
         android:textAllCaps="false"
-        android:textColor="@color/grad3"
+        android:textColor="@color/white"
         android:background="@drawable/buttons"/>
 </RelativeLayout>

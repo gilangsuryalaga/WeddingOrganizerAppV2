@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#fafafa"
     tools:context=".ConfirmFinalOrderActivity">
 
     <TextView
@@ -23,6 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/txt"
         android:layout_marginLeft="20dp"
+
         android:layout_marginTop="60dp"
         android:layout_marginRight="20dp"
         android:hint="Input Your Full Name" />

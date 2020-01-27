@@ -40,7 +40,7 @@
         android:id="@+id/slide_descs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-condensed-medium"
+        android:fontFamily="@font/a_little_sunshine"
         android:gravity="center"
         android:padding="15dp"
         android:text="Lorem ipsum dolor sit amet, consectur adipiscing elit, sed do eusmod tempor incididunt ut labore et dolore magna"

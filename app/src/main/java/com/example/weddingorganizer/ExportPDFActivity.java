@@ -2,6 +2,7 @@ package com.example.weddingorganizer;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.FileProvider;
 
 import android.content.ActivityNotFoundException;
 import android.content.Context;
@@ -121,12 +122,12 @@ public class ExportPDFActivity extends AppCompatActivity {
 
         bitmap = Bitmap.createScaledBitmap(bitmap, convertWidth, convertHighet, true);
 
-        paint.setColor(Color.BLUE);
+        paint.setColor(Color.WHITE);
         canvas.drawBitmap(bitmap, 0, 0 , null);
         document.finishPage(page);
 
         // write the document content
-        String targetPdf = "/sdcard/pdffromlayout.pdf";
+        String targetPdf = "/sdcard/invoice.pdf";
         File filePath;
         filePath = new File(targetPdf);
         try {
@@ -146,7 +147,7 @@ public class ExportPDFActivity extends AppCompatActivity {
     }
 
     private void openGeneratedPDF() {
-        File file = new File("/sdcard/pdffromlayout.pdf");
+        File file = new File("/sdcard/invoice.pdf");
         if (file.exists()) {
             Intent intent = new Intent(Intent.ACTION_VIEW);
             Uri uri = Uri.fromFile(file);

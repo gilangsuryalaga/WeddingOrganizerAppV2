@@ -26,8 +26,9 @@
         android:gravity="center"
         android:text="Product Name"
         android:textColor="@color/grad3"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+        android:fontFamily="@font/a_little_sunshine"
+        android:textSize="40sp"
+        android:textStyle="bold"/>
 
     <TextView
         android:id="@+id/product_description_details"
@@ -38,7 +39,8 @@
         android:gravity="center"
         android:text="Product Description"
         android:textColor="@color/grad3"
-        android:textSize="16sp"
+        android:fontFamily="@font/a_little_sunshine"
+        android:textSize="26sp"
         android:textStyle="bold" />
 
     <TextView
@@ -50,7 +52,8 @@
         android:gravity="center"
         android:text="Product Price"
         android:textColor="#FB8C00"
-        android:textSize="20sp"
+        android:fontFamily="@font/a_little_sunshine"
+        android:textSize="27sp"
         android:textStyle="bold" />
 
     <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
@@ -77,6 +80,8 @@
         android:background="@drawable/buttons"
         android:text="Add to Cart"
         android:textColor="@color/white"
-        android:textSize="18dp" />
+        android:fontFamily="@font/a_little_sunshine"
+        android:textStyle="bold"
+        android:textSize="28dp" />
 
 </RelativeLayout>

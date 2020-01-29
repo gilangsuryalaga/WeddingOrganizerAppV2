@@ -8,7 +8,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/gradient_main"
+        android:background="@color/colorPrimaryDark"
         android:padding="10dp">
 
         <TextView
@@ -18,7 +18,8 @@
             android:layout_marginLeft="5dp"
             android:text="User Name"
             android:textColor="@android:color/white"
-            android:textSize="14dp"
+            android:textSize="17dp"
+            android:fontFamily="@font/a_little_sunshine"
             android:textStyle="bold" />
 
         <TextView
@@ -31,7 +32,8 @@
             android:text="Phone Number"
             android:textAlignment="viewEnd"
             android:textColor="@android:color/white"
-            android:textSize="14dp"
+            android:textSize="17dp"
+            android:fontFamily="@font/a_little_sunshine"
             android:textStyle="bold" />
 
         <TextView
@@ -43,7 +45,8 @@
             android:gravity="center"
             android:text="Total Price"
             android:textColor="@android:color/white"
-            android:textSize="18dp"
+            android:fontFamily="@font/a_little_sunshine"
+            android:textSize="20dp"
             android:textStyle="bold" />
 
         <TextView
@@ -55,7 +58,8 @@
             android:gravity="center"
             android:text="Address, City"
             android:textColor="@android:color/white"
-            android:textSize="18dp"
+            android:textSize="20dp"
+            android:fontFamily="@font/a_little_sunshine"
             android:textStyle="bold" />
 
         <TextView
@@ -67,7 +71,8 @@
             android:gravity="center"
             android:text="Date Time"
             android:textColor="@android:color/white"
-            android:textSize="18dp"
+            android:textSize="20dp"
+            android:fontFamily="@font/a_little_sunshine"
             android:textStyle="bold" />
 
         <Button
@@ -79,7 +84,8 @@
             android:layout_marginTop="20dp"
             android:background="@android:color/white"
             android:textColor="@color/colorPrimaryDark"
-            android:textSize="18dp"
+            android:fontFamily="@font/a_little_sunshine"
+            android:textSize="20sp"
             android:text="Show This Order"
             android:layout_below="@id/orders_data_time"/>
     </RelativeLayout>

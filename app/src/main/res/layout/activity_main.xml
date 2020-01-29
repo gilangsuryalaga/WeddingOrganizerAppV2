@@ -21,11 +21,12 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/app_logo"
         android:layout_centerHorizontal="true"
-        android:fontFamily="@font/kavivanar"
         android:text="@string/app_slogan"
         android:textAlignment="center"
         android:textColor="@color/grad3"
-        android:textSize="18sp"
+        android:fontFamily="@font/a_little_sunshine"
+        android:textSize="20dp"
+
         android:textStyle="bold|italic" />
     <Button
         android:id="@+id/main_login_btn"
@@ -39,8 +40,9 @@
         android:background="#00FFFFFF"
         android:padding="20dp"
         android:textAllCaps="false"
-        android:textStyle="italic"
-        android:textSize="18sp"
+        android:fontFamily="@font/a_little_sunshine"
+        android:textSize="20dp"
+        android:textStyle="bold|italic"
         android:text="@string/already_have_an_account_login"
         android:textColor="@color/grad3"/>
     <Button
@@ -54,9 +56,9 @@
         android:background="@drawable/buttons"
         android:padding="20dp"
         android:textAllCaps="false"
-        android:textSize="18sp"
         android:text="@string/join_now"
-        android:textStyle="bold"
-        android:textColor="@color/white"/>
+        android:fontFamily="@font/a_little_sunshine"
+        android:textSize="24sp"
+        android:textStyle="bold"        android:textColor="@color/white"/>
 
 </RelativeLayout>

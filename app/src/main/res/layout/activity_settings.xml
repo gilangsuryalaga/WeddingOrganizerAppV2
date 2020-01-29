@@ -65,6 +65,7 @@
         android:layout_marginRight="10dp"
         android:text="Change Profile"
         android:textColor="@android:color/black"
+        android:fontFamily="@font/a_little_sunshine"
         android:textSize="17sp"
         android:textStyle="bold" />
     <EditText
@@ -81,12 +82,14 @@
         android:layout_below="@id/settings_phone_number"
         android:hint="Full name..."
         android:layout_margin="15dp"
+        android:fontFamily="@font/a_little_sunshine"
         android:padding="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <EditText
         android:id="@+id/settings_address"
         android:layout_below="@id/settings_full_name"
+        android:fontFamily="@font/a_little_sunshine"
         android:hint="Address..."
         android:layout_margin="15dp"
         android:layout_width="match_parent"
@@ -102,6 +105,7 @@
         android:textColor="@android:color/white"
         android:layout_width="match_parent"
         android:padding="10dp"
+        android:fontFamily="@font/a_little_sunshine"
         android:layout_height="wrap_content"/>
 
 </RelativeLayout>

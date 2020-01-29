@@ -46,6 +46,8 @@
             android:background="#00FFFFFF"
             android:padding="10dp"
             android:textAllCaps="false"
+            android:fontFamily="@font/a_little_sunshine"
+            android:textStyle="bold"
             android:text="Back"
             android:textSize="25dp"
             android:visibility="invisible" />
@@ -58,6 +60,8 @@
             android:layout_alignParentRight="true"
             android:background="#00FFFFFF"
             android:textAllCaps="false"
+            android:fontFamily="@font/a_little_sunshine"
+            android:textStyle="bold"
             android:padding="10dp"
             android:text="Next"
             android:textSize="25dp" />

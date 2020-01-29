@@ -40,7 +40,8 @@
                 android:padding="20dp"
                 android:textColor="@color/grad3"
                 android:textColorHint="@color/grad1"
-                android:textSize="17sp"
+                android:fontFamily="@font/a_little_sunshine"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <EditText
@@ -57,7 +58,8 @@
                 android:padding="20dp"
                 android:textColor="@color/grad3"
                 android:textColorHint="@color/grad1"
-                android:textSize="17sp"
+                android:fontFamily="@font/a_little_sunshine"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -78,7 +80,8 @@
                     android:text="@string/remember_me"
                     android:textColor="@color/colorAccent"
                     android:textColorHint="@color/colorPrimaryDark"
-                    android:textSize="16sp"
+                    android:fontFamily="@font/a_little_sunshine"
+                    android:textSize="20dp"
                     android:textStyle="bold"
                     app:cbd_strokeColor="@color/colorPrimaryDark" />
 
@@ -89,9 +92,11 @@
                     android:layout_marginLeft="100dp"
                     android:text="@string/forget_password"
                     android:textColor="@color/colorAccent"
-                    android:textSize="15sp"
+                    android:fontFamily="@font/a_little_sunshine"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
                     android:layout_marginBottom="5dp"
-                    android:textStyle="bold" />
+                    />
             </LinearLayout>
 
             <Button
@@ -109,7 +114,9 @@
                 android:text="@string/login"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textSize="20sp" />
+                android:fontFamily="@font/a_little_sunshine"
+                android:textSize="25dp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/admin_panel_link"

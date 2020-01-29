@@ -27,6 +27,7 @@
         android:textColor="@color/grad3"
         android:textColorHint="@color/grad3"
         android:layout_marginLeft="45dp"
+        android:fontFamily="@font/a_little_sunshine"
         android:layout_marginRight="45dp"
         android:background="@drawable/input_design_2"
         />
@@ -41,6 +42,7 @@
         android:hint="Product Description ..."
         android:textColor="@color/grad3"
         android:textColorHint="@color/grad3"
+        android:fontFamily="@font/a_little_sunshine"
         android:layout_marginLeft="45dp"
         android:layout_marginRight="45dp"
         android:background="@drawable/input_design_2"
@@ -57,6 +59,7 @@
         android:padding="20dp"
         android:hint="Product Price..."
         android:layout_marginLeft="45dp"
+        android:fontFamily="@font/a_little_sunshine"
         android:layout_marginRight="45dp"
         android:background="@drawable/input_design_2"
         />
@@ -68,7 +71,9 @@
         android:text="Add Product"
         android:layout_marginLeft="45dp"
         android:layout_marginRight="45dp"
+        android:fontFamily="@font/a_little_sunshine"
         android:padding="17dp"
+        android:textStyle="bold"
         android:layout_marginTop="20dp"
         android:textSize="18sp"
         android:textAllCaps="false"

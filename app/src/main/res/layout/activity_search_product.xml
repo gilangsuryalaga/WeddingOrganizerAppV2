@@ -24,6 +24,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
             android:hint="Find name..."
+            android:fontFamily="@font/a_little_sunshine"
             android:padding="9dp"
             android:textColor="@android:color/black"
             android:textColorHint="@android:color/black"
@@ -39,9 +40,10 @@
             android:background="#00FFFFFF"
             android:padding="9dp"
             android:layout_centerInParent="true"
+            android:fontFamily="@font/a_little_sunshine"
             android:text="Search"
             android:textColor="@android:color/black"
-            android:textSize="10dp"
+            android:textSize="15dp"
             android:textStyle="bold" />
     </RelativeLayout>
     <androidx.recyclerview.widget.RecyclerView

@@ -153,6 +153,8 @@ public class ExportPDFActivity extends AppCompatActivity {
             Uri uri = Uri.fromFile(file);
             intent.setDataAndType(uri, "application/pdf");
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
 
             try {
                 startActivity(intent);

@@ -12,6 +12,13 @@
         android:layout_width="match_parent"
         android:layout_height="260dp"
         android:scaleType="centerCrop" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="5dp"
+        style="@style/Divider"
+        android:layout_below="@id/product_image_details"
+        />
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,6 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
+            android:textStyle="bold"
             android:gravity="left"
             android:text="Product Name"
             android:textColor="@color/grad3"
@@ -43,7 +51,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/product_price_details"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="10dp"
             android:text="Product Description"
             android:padding="15sp"
             android:textColor="@color/grad3"
@@ -68,8 +76,8 @@
 
         <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
             android:id="@+id/number_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
             android:layout_below="@id/product_description_details"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
@@ -77,8 +85,7 @@
             android:elevation="6dp"
             app:finalNumber="10"
             app:initialNumber="1"
-            app:textSize="15dp"
-            android:visibility="gone">
+            app:textSize="15dp">
 
         </com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
 

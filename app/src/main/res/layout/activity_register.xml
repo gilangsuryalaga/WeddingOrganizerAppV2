@@ -20,17 +20,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:drawableLeft="@drawable/ic_person_black_24dp"
         android:layout_below="@id/register_applogo"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:background="@drawable/input_design_2"
         android:hint="@string/name"
         android:inputType="textPersonName"
-        android:padding="20dp"
-        android:textColor="@color/grad3"
-        android:textColorHint="@color/grad1"
+        android:padding="15dp"
+        android:textColor="@color/grad1"
+        android:textColorHint="#817777"
+        android:textAlignment="center"
         android:fontFamily="@font/a_little_sunshine"
-        android:textSize="27sp"
+        android:textSize="20sp"
         android:textStyle="bold" />
 
 
@@ -42,14 +44,17 @@
         android:layout_below="@id/user_name_input"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
+        android:drawableLeft="@drawable/ic_phone_forwarded_black_24dp"
         android:background="@drawable/input_design_2"
         android:hint="@string/phone_number"
         android:inputType="number"
-        android:padding="20dp"
-        android:textColor="@color/grad3"
-        android:textColorHint="@color/grad1"
+        android:padding="15dp"
+        android:textAlignment="center"
+        android:paddingStart="20dp"
+        android:textColor="@color/grad1"
+        android:textColorHint="#817777"
         android:fontFamily="@font/a_little_sunshine"
-        android:textSize="27sp"
+        android:textSize="20sp"
         android:textStyle="bold" />
 
     <EditText
@@ -60,13 +65,15 @@
         android:layout_marginLeft="15dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="15dp"
+        android:drawableLeft="@drawable/ic_https_black_24dp"
         android:background="@drawable/input_design_2"
         android:hint="@string/password"
         android:inputType="textPassword"
-        android:padding="20dp"
-        android:textColor="@color/grad3"
-        android:textColorHint="@color/grad1"
-        android:textSize="27sp"
+        android:padding="15dp"
+        android:textAlignment="center"
+        android:textColor="@color/grad1"
+        android:textColorHint="#817777"
+        android:textSize="20sp"
         android:fontFamily="@font/a_little_sunshine"
         android:textStyle="bold" />
 
@@ -86,5 +93,5 @@
         android:textAllCaps="false"
         android:fontFamily="@font/a_little_sunshine"
         android:textColor="@color/white"
-        android:textSize="25sp" />
+        android:textSize="20sp" />
 </RelativeLayout>

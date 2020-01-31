@@ -24,10 +24,9 @@
         android:text="@string/app_slogan"
         android:textAlignment="center"
         android:textColor="@color/grad3"
-        android:fontFamily="@font/a_little_sunshine"
+        android:fontFamily="@font/product_sans_regular"
         android:textSize="20dp"
-
-        android:textStyle="bold|italic" />
+        />
     <Button
         android:id="@+id/main_login_btn"
         android:layout_width="match_parent"
@@ -40,7 +39,7 @@
         android:background="#00FFFFFF"
         android:padding="20dp"
         android:textAllCaps="false"
-        android:fontFamily="@font/a_little_sunshine"
+        android:fontFamily="@font/product_sans_bold"
         android:textSize="20dp"
         android:textStyle="bold|italic"
         android:text="@string/already_have_an_account_login"
@@ -57,7 +56,7 @@
         android:padding="20dp"
         android:textAllCaps="false"
         android:text="@string/join_now"
-        android:fontFamily="@font/a_little_sunshine"
+        android:fontFamily="@font/product_sans_bold"
         android:textSize="24sp"
         android:textStyle="bold"        android:textColor="@color/white"/>
 

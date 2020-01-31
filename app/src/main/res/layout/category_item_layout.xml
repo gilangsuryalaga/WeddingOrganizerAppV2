@@ -18,6 +18,8 @@
         android:layout_centerInParent="true"
         android:text="Special Discount"
         android:textStyle="bold"
+        android:textAlignment="center"
+        android:fontFamily="@font/product_sans_regular"
         android:textColor="@color/white"/>
 </RelativeLayout>
 </androidx.cardview.widget.CardView>

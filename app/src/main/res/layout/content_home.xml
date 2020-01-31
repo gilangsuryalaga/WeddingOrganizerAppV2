@@ -89,7 +89,11 @@
                     android:text="Most Popular"
                     android:textColor="@color/grad3"
                     android:textSize="20dp"
-                    android:textStyle="bold"></TextView>
+                    android:textStyle="bold"
+                    android:fontFamily="@font/product_sans_regular"
+                    >
+
+                </TextView>
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recycler_menu"

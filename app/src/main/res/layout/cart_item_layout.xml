@@ -18,10 +18,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:text="Product Name"
-            android:fontFamily="@font/a_little_sunshine"
+            android:fontFamily="@font/product_sans_regular"
             android:textColor="@color/colorPrimaryDark"
-            android:textSize="20dp"
-            android:textStyle="bold" />
+            android:textSize="20dp" />
 
         <TextView
             android:id="@+id/cart_product_quantity"
@@ -32,10 +31,9 @@
             android:layout_marginRight="5dp"
             android:text="Product Quantitiy"
             android:textAlignment="viewEnd"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="#817373"
             android:textSize="20dp"
-            android:fontFamily="@font/a_little_sunshine"
-            android:textStyle="bold" />
+            android:fontFamily="@font/product_sans_regular"/>
 
         <TextView
             android:id="@+id/cart_product_price"
@@ -45,8 +43,8 @@
             android:layout_marginTop="10dp"
             android:gravity="center"
             android:text="Product Price"
-            android:fontFamily="@font/a_little_sunshine"
-            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/product_sans_regular"
+            android:textColor="#FB8C00"
             android:textSize="20dp"
             android:textStyle="bold" />
 

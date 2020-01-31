@@ -15,7 +15,7 @@
         android:text="Please Write Your Shipment Details"
         android:textAlignment="center"
         android:textColor="@color/colorPrimaryDark"
-        android:fontFamily="@font/a_little_sunshine"
+        android:fontFamily="@font/product_sans_regular"
         android:textSize="25dp"
         android:textStyle="bold" />
 
@@ -25,9 +25,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/txt"
         android:layout_marginLeft="20dp"
-        android:fontFamily="@font/a_little_sunshine"
+        android:fontFamily="@font/product_sans_regular"
         android:textSize="20dp"
-        android:textStyle="bold"
         android:layout_marginTop="60dp"
         android:layout_marginRight="20dp"
         android:hint="Input Your Full Name" />
@@ -40,9 +39,8 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="5dp"
         android:layout_marginRight="20dp"
-        android:fontFamily="@font/a_little_sunshine"
+        android:fontFamily="@font/product_sans_regular"
         android:textSize="20dp"
-        android:textStyle="bold"
         android:hint="Input Your Phone Number"
         android:inputType="number" />
 
@@ -53,9 +51,8 @@
         android:layout_below="@id/shipment_phone_number"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="5dp"
-        android:fontFamily="@font/a_little_sunshine"
+        android:fontFamily="@font/product_sans_regular"
         android:textSize="20dp"
-        android:textStyle="bold"
         android:layout_marginRight="20dp"
         android:hint="Input Your Address" />
 
@@ -67,9 +64,8 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="5dp"
         android:layout_marginRight="20dp"
-        android:fontFamily="@font/a_little_sunshine"
+        android:fontFamily="@font/product_sans_regular"
         android:textSize="20dp"
-        android:textStyle="bold"
         android:hint="Input Your City Name" />
 
     <Button
@@ -81,7 +77,7 @@
         android:background="@drawable/buttons"
         android:text="Confirm"
         android:textColor="@android:color/white"
-        android:fontFamily="@font/a_little_sunshine"
+        android:fontFamily="@font/product_sans_regular"
         android:textSize="25dp"
         android:textStyle="bold" />
 </RelativeLayout>

@@ -22,9 +22,8 @@
             android:text="Total Price"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:fontFamily="@font/a_little_sunshine"
-            android:textSize="25dp"
-            android:textStyle="bold" />
+            android:fontFamily="@font/product_sans_bold"
+            android:textSize="25dp" />
     </RelativeLayout>
     <TextView
         android:id="@+id/msg1"
@@ -58,5 +57,6 @@
         android:text="Next"
         android:layout_margin="10dp"
         android:textColor="@color/white"
+        android:fontFamily="@font/product_sans_bold"
         android:textSize="20dp" />
 </RelativeLayout>

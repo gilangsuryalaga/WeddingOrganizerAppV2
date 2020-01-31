@@ -28,7 +28,8 @@
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
         android:textColor="#7C73E6"
-        android:textSize="30dp"
+        android:textSize="25dp"
+        android:fontFamily="@font/product_sans_regular"
         android:textAllCaps="true"
         android:textStyle="bold">
 
@@ -40,13 +41,13 @@
         android:id="@+id/slide_descs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/a_little_sunshine"
+        android:fontFamily="@font/product_sans_regular"
         android:gravity="center"
         android:padding="15dp"
         android:text="Lorem ipsum dolor sit amet, consectur adipiscing elit, sed do eusmod tempor incididunt ut labore et dolore magna"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="#4F6F80"
-        android:textSize="30dp"></TextView>
+        android:textSize="20dp"></TextView>
 
 </LinearLayout>

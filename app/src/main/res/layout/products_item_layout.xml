@@ -32,7 +32,8 @@
             android:textAllCaps="false"
             android:layout_marginTop="5dp"
             android:textColor="@color/grad3"
-            android:textSize="20dp"/>
+            android:fontFamily="@font/product_sans_regular"
+            android:textSize="15dp"/>
 
         <ImageView
             android:id="@+id/product_image"
@@ -51,8 +52,9 @@
             android:layout_marginTop="10dp"
             android:text="Product Price"
             android:textColor="#EE3833"
-            android:textSize="15dp"
-            android:textStyle="italic|bold" />
+            android:textSize="16dp"
+            android:fontFamily="@font/product_sans_regular"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/product_description"

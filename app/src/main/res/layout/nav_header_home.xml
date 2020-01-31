@@ -31,6 +31,7 @@
         android:layout_marginLeft="4dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="@color/grad3"
+        android:fontFamily="@font/product_sans_regular"
         android:textSize="20sp"
         android:textStyle="bold" />
 

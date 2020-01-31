@@ -16,7 +16,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:text="@string/add_new_product"
-        android:fontFamily="@font/a_little_sunshine"
+        android:fontFamily="@font/product_sans_regular"
         android:textAlignment="center"
         android:textSize="20sp"
         android:textStyle="bold" />
@@ -63,10 +63,10 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginLeft="10dp"
                         android:text="Wedding Dress"
-                        android:fontFamily="@font/a_little_sunshine"
+                        android:fontFamily="@font/product_sans_regular"
                         android:textSize="20dp"
                         android:textAlignment="center"
-                        android:textStyle="italic" />
+                         />
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -92,8 +92,8 @@
                         android:text="Wedding Suit"
                         android:textAlignment="center"
                         android:textSize="20dp"
-                        android:fontFamily="@font/a_little_sunshine"
-                        android:textStyle="italic" />
+                        android:fontFamily="@font/product_sans_regular"
+                         />
                 </RelativeLayout>
             </LinearLayout>
 
@@ -126,9 +126,9 @@
                         android:layout_below="@id/wedding_foods"
                         android:layout_marginTop="5dp"
                         android:text="Wedding Cathering"
-                        android:fontFamily="@font/a_little_sunshine"
+                        android:fontFamily="@font/product_sans_regular"
                         android:textSize="20dp"
-                        android:textStyle="italic" />
+                         />
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -150,10 +150,10 @@
                         android:layout_below="@id/wedding_wo"
                         android:layout_marginTop="5dp"
                         android:text="Wedding Organizer"
-                        android:fontFamily="@font/a_little_sunshine"
+                        android:fontFamily="@font/product_sans_regular"
                         android:textSize="20dp"
                         android:textAlignment="center"
-                        android:textStyle="italic" />
+                         />
                 </RelativeLayout>
             </LinearLayout>
 
@@ -186,9 +186,9 @@
                         android:layout_below="@id/wedding_decor"
                         android:layout_marginTop="5dp"
                         android:text="Wedding Decoration"
-                        android:fontFamily="@font/a_little_sunshine"
+                        android:fontFamily="@font/product_sans_regular"
                         android:textSize="20dp"
-                        android:textStyle="italic" />
+                         />
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -211,10 +211,10 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginLeft="10dp"
                         android:text="Entertainment"
-                        android:fontFamily="@font/a_little_sunshine"
+                        android:fontFamily="@font/product_sans_regular"
                         android:textSize="20dp"
                         android:textAlignment="center"
-                        android:textStyle="italic" />
+                         />
                 </RelativeLayout>
             </LinearLayout>
 
@@ -248,9 +248,9 @@
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="5dp"
                         android:text="Photographer"
-                        android:fontFamily="@font/a_little_sunshine"
+                        android:fontFamily="@font/product_sans_regular"
                         android:textSize="20dp"
-                        android:textStyle="italic" />
+                         />
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -273,9 +273,9 @@
                         android:layout_marginTop="5dp"
                         android:text="Wedding Make Up"
                         android:textAlignment="center"
-                        android:fontFamily="@font/a_little_sunshine"
+                        android:fontFamily="@font/product_sans_regular"
                         android:textSize="20dp"
-                        android:textStyle="italic" />
+                         />
                 </RelativeLayout>
             </LinearLayout>
         </LinearLayout>
@@ -308,7 +308,7 @@
         android:layout_margin="10dp"
         android:textColor="@android:color/white"
         android:textAllCaps="false"
-        android:fontFamily="@font/a_little_sunshine"
+        android:fontFamily="@font/product_sans_regular"
         android:textSize="25dp"
         android:textStyle="bold"
         android:layout_width="match_parent"
@@ -326,7 +326,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="5dp"
         android:textColor="@android:color/white"
-        android:fontFamily="@font/a_little_sunshine"
+        android:fontFamily="@font/product_sans_regular"
         android:textSize="25dp"
         android:textStyle="bold"
         android:textAllCaps="false"

@@ -36,7 +36,7 @@
             android:textAlignment="center"
             android:textColor="@color/grad3"
             android:textColorHint="@color/grad3"
-            android:fontFamily="@font/a_little_sunshine"
+            android:fontFamily="@font/product_sans_regular"
             android:textSize="25dp"
             android:textStyle="bold" />
 
@@ -53,7 +53,7 @@
             android:textAlignment="center"
             android:textColor="@color/grad3"
             android:textColorHint="@color/grad3"
-            android:fontFamily="@font/a_little_sunshine"
+            android:fontFamily="@font/product_sans_regular"
             android:textSize="25dp"
             android:textStyle="bold"
             />
@@ -70,7 +70,7 @@
             android:textAlignment="center"
             android:textColor="@color/grad3"
             android:textColorHint="@color/grad3"
-            android:fontFamily="@font/a_little_sunshine"
+            android:fontFamily="@font/product_sans_regular"
             android:textSize="25dp"
             android:textStyle="bold"
             />
@@ -87,7 +87,7 @@
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="@color/grad3"
-            android:fontFamily="@font/a_little_sunshine"
+            android:fontFamily="@font/product_sans_regular"
             android:textSize="25dp"
             android:textStyle="bold"
             />
@@ -103,7 +103,7 @@
             android:layout_alignParentBottom="true"
             android:textAllCaps="false"
             android:textColor="@android:color/black"
-            android:fontFamily="@font/a_little_sunshine"
+            android:fontFamily="@font/product_sans_regular"
             android:textSize="25dp"
             android:textStyle="bold"/>
 

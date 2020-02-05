@@ -42,6 +42,7 @@ import android.view.Menu;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.ViewFlipper;
 
 import java.text.DecimalFormat;
@@ -50,6 +51,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
+import es.dmoral.toasty.Toasty;
 import io.paperdb.Paper;
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -312,14 +314,17 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         } else if (id == R.id.nav_search) {
             if (!type.equals("Admin"))
             {
-                Intent intent = new Intent(HomeActivity.this, SearchProductActivity.class);
-                startActivity(intent);
+                Toasty.info(HomeActivity.this, "Coming soon!", Toast.LENGTH_SHORT, true).show();
+
+//                Intent intent = new Intent(HomeActivity.this, SearchProductActivity.class);
+//                startActivity(intent);
 
             }
 
         } else if (id == R.id.nav_categories) {
             if (!type.equals("Admin"))
             {
+                Toasty.info(HomeActivity.this, "Coming soon!", Toast.LENGTH_SHORT, true).show();
 
             }
         } else if (id == R.id.nav_settings) {

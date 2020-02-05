@@ -29,6 +29,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
+import com.squareup.picasso.Target;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
@@ -93,6 +95,7 @@ public class CartActivity extends AppCompatActivity {
             @Override
             protected void onBindViewHolder(@NonNull CartViewHolder holder, int i, @NonNull final Cart model) {
                 NumberFormat formatter = new DecimalFormat("#,###");
+//                Picasso.get().load(model.getImage()).into((Target) holder.ProductImage);
                 holder.txtProductQuantity.setText("Qty: " + model.getQuantity());
                 String price = formatter.format(Integer.valueOf(model.getPrice()));
                 holder.txtProductPrice.setText("Rp " + price);

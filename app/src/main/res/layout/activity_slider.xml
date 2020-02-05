@@ -40,7 +40,7 @@
 
         <Button
             android:id="@+id/back"
-            android:textColor="@android:color/black"
+            android:textColor="@android:color/darker_gray"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#00FFFFFF"
@@ -49,12 +49,12 @@
             android:fontFamily="@font/product_sans_regular"
             android:textStyle="bold"
             android:text="Back"
-            android:textSize="25dp"
+            android:textSize="20dp"
             android:visibility="invisible" />
 
         <Button
             android:id="@+id/next"
-            android:textColor="@android:color/black"
+            android:textColor="@android:color/darker_gray"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
@@ -64,6 +64,6 @@
             android:textStyle="bold"
             android:padding="10dp"
             android:text="Next"
-            android:textSize="25dp" />
+            android:textSize="20dp" />
     </RelativeLayout>
 </RelativeLayout>

@@ -92,11 +92,11 @@
                     android:id="@+id/forget_password_link"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="110dp"
+                    android:layout_marginLeft="90dp"
                     android:text="@string/forget_password"
                     android:textColor="@color/colorAccent"
                     android:fontFamily="@font/product_sans_bold"
-                    android:textSize="20dp"
+                    android:textSize="15dp"
                     android:textStyle="bold"
                     android:layout_marginBottom="5dp"
                     />
@@ -104,8 +104,8 @@
 
             <Button
                 android:id="@+id/login_btn"
-                android:layout_width="150dp"
-                android:layout_height="50dp"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
                 android:layout_below="@id/linear_layout_1"
                 android:layout_marginLeft="15dp"
                 android:layout_alignParentRight="true"
@@ -118,7 +118,7 @@
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:fontFamily="@font/product_sans_bold"
-                android:textSize="25dp"
+                android:textSize="20dp"
                 android:textStyle="bold" />
 
             <TextView

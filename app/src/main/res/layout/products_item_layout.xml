@@ -12,6 +12,27 @@
     app:cardCornerRadius="15dp"
     app:cardElevation="10dp">
 
+    <androidx.cardview.widget.CardView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        app:cardBackgroundColor="#00FFFFFF"
+        android:backgroundTint="#00FFFFFF"
+        android:outlineAmbientShadowColor="#00FFFFFF"
+        android:outlineProvider="none"
+        android:layout_marginLeft="5dp"
+
+        android:layout_marginTop="5dp">
+
+        <com.like.LikeButton
+            android:id="@+id/love_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:icon_size="25dp"
+            app:anim_scale_factor="2.5"
+            app:icon_type="heart" />
+
+    </androidx.cardview.widget.CardView>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -23,22 +44,22 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/product_image"
             android:layout_centerHorizontal="true"
-            android:maxLines="1"
-            android:maxEms="@integer/google_play_services_version"
-            android:paddingLeft="5dp"
+            android:layout_marginTop="5dp"
             android:ellipsize="end"
+            android:fontFamily="@font/product_sans_regular"
+            android:maxEms="@integer/google_play_services_version"
+            android:maxLines="1"
+            android:paddingLeft="5dp"
             android:paddingRight="5dp"
             android:text="Product Name"
             android:textAllCaps="false"
-            android:layout_marginTop="5dp"
             android:textColor="@color/grad3"
-            android:fontFamily="@font/product_sans_regular"
-            android:textSize="15dp"/>
+            android:textSize="16dp" />
 
         <ImageView
             android:id="@+id/product_image"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="170dp"
             android:layout_centerHorizontal="true"
             android:scaleType="centerCrop" />
 
@@ -47,13 +68,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/product_name"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/product_sans_regular"
             android:paddingLeft="5dp"
             android:paddingRight="5dp"
-            android:layout_marginTop="10dp"
             android:text="Product Price"
             android:textColor="#EE3833"
-            android:textSize="16dp"
-            android:fontFamily="@font/product_sans_regular"
+            android:textSize="14dp"
             android:textStyle="bold" />
 
         <TextView
@@ -61,7 +82,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/product_price"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="3dp"
             android:layout_marginBottom="10dp"
             android:maxLength="@integer/google_play_services_version"
             android:maxLines="1"

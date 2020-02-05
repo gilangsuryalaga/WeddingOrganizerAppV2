@@ -1,14 +1,15 @@
 package com.example.weddingorganizer.Model;
 
 public class Cart {
-    private String pid, name, price, quantity, discount;
+    private String pid, name,image, price, quantity, discount;
 
     public Cart() {
     }
 
-    public Cart(String pid, String name, String price, String quantity, String discount) {
+    public Cart(String pid, String name,String image, String price, String quantity, String discount) {
         this.pid = pid;
         this.name = name;
+        this.image = image;
         this.price = price;
         this.quantity = quantity;
         this.discount = discount;
@@ -28,6 +29,14 @@ public class Cart {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public String getPrice() {

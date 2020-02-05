@@ -23,4 +23,10 @@
         <item name="android:background">#817777</item>
     </style>
 
+<!--    <style name="MyRatingBar" parent="@android:style/Widget.RatingBar">-->
+<!--        <item name="android:progressDrawable">@drawable/my_ratingbar</item>-->
+<!--        <item name="android:minHeight">18dip</item>-->
+<!--        <item name="android:maxHeight">18dip</item>-->
+<!--    </style>-->
+
 </resources>

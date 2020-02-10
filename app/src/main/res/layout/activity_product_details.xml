@@ -19,91 +19,100 @@
         style="@style/Divider"
         android:layout_below="@id/product_image_details"
         />
+
+
     <RelativeLayout
         android:id="@+id/detail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
         android:layout_below="@id/product_image_details"
-        >
+        android:layout_marginTop="1dp"
+        android:padding="10dp">
 
         <TextView
             android:id="@+id/product_name_details"
             android:layout_width="wrap_content"
-            android:textAllCaps="true"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/product_sans_regular"
 
             android:gravity="left"
             android:text="Product Name"
+            android:textAllCaps="true"
             android:textColor="@color/grad3"
-            android:fontFamily="@font/product_sans_regular"
-            android:textSize="20sp"
-            />
+            android:textSize="20sp" />
+
         <RatingBar
             android:id="@+id/ratingbar"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:rating="5.5"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="10dp"
             style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_below="@id/product_price_details"
-            />
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:rating="5.5" />
+
         <View
+            android:id="@+id/divider"
+            style="@style/Divider"
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            style="@style/Divider"
-            android:layout_below="@id/ratingbar"
-            />
+            android:layout_below="@id/ratingbar" />
 
-        <TextView
-            android:id="@+id/product_description_details"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/product_price_details"
-            android:layout_marginTop="10dp"
-            android:text="Product Description"
-            android:padding="15sp"
-            android:textColor="@color/grad3"
-            android:fontFamily="@font/product_sans_regular"
-            android:textSize="18sp"
-            />
         <TextView
             android:id="@+id/product_price_details"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/product_name_details"
             android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/product_sans_regular"
             android:gravity="left"
+            android:paddingLeft="10dp"
             android:text="Product Price"
             android:textColor="#FB8C00"
-            android:fontFamily="@font/product_sans_regular"
             android:textSize="20sp"
-            android:paddingLeft="10dp"
-            android:layout_marginBottom="5dp"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
+
+        <ScrollView
+            android:paddingTop="10dp"
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="285dp"
+            android:layout_below="@id/divider"
+            android:scrollbars="none"
+            >
+
+            <TextView
+                android:id="@+id/product_description_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/product_sans_regular"
+                android:padding="15sp"
+                android:text="Product Description"
+                android:textColor="@color/grad3"
+                android:textSize="18sp" />
+        </ScrollView>
 
 
         <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
             android:id="@+id/number_btn"
             android:layout_width="120dp"
             android:layout_height="50dp"
-            android:layout_below="@id/product_description_details"
+            android:layout_below="@id/description"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
-            app:textColor="@color/white"
             android:elevation="6dp"
+            android:visibility="gone"
             app:finalNumber="10"
             app:initialNumber="1"
+            app:textColor="@color/white"
             app:textSize="15dp">
 
         </com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
 
     </RelativeLayout>
-
 
     <Button
         android:id="@+id/pd_add_to_cart_btn"
